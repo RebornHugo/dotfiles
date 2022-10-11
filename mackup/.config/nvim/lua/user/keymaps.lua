@@ -74,6 +74,8 @@ keymap("n", "<C-S-j>", "<Esc>:m +1<CR>gi", opts)
 
 -- TODO(Hugo): NvimTree is not updated when new file is added
 
+-- TODO(Hugo): gitmux installation
+
 
 -- Insert --
 -- Press jk fast to enter
