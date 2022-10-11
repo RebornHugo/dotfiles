@@ -1,8 +1,8 @@
 [user]
 	name = RebornHugo
 	email = hugo@nuaa.edu.cn
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+; [url "git@github.com:"]
+; 	insteadOf = https://github.com/
 [core]
 	editor = nvim
  	; excludesfile = /Users/joshmedeski/.gitignore
