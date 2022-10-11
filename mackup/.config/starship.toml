@@ -1,0 +1,35 @@
+# doc: https://starship.rs/config/#prompt
+[character]
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
+vicmd_symbol = "[](bold blue)"
+
+[directory]
+style = "blue bold"
+
+[package]
+disabled = true
+
+# [username]
+# disabled = true
+
+# [hostname]
+# disabled = true
+
+# [docker_context]
+# disabled = false
+
+# [git_branch]
+# disabled = false
+
+# [git_commit]
+# disabled = true
+
+# [git_state]
+# disabled = true
+
+# [git_metrics]
+# disabled = true
+
+# [git_status]
+# disabled = true

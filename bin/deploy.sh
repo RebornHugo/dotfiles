@@ -40,7 +40,8 @@ if [[ $PLATFORM == 'macos' ]]; then
 
 
 # mackup
-# ln -s ~/Workspace/Coding/dotfiles/mackup/.mackup.cfg ~/.mackup.cfg
+ln -s ~/Workspace/Coding/dotfiles/mackup/.mackup.cfg ~/.mackup.cfg
+ln -s ~/Workspace/Coding/dotfiles/mackup/.mackup ~/.mackup
 # ln -s /Users/hugoreborn/Workspace/Coding/dotfiles/mackup/.mackup.cfg /Users/hugoreborn/.mackup.cfg
 mackup restore
 
