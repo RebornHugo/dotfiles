@@ -12,7 +12,7 @@
   "keyMappings": "unmap J\nunmap K\nunmap H\nunmap L\nmap H previousTab\nmap L nextTab\nmap <c-d> scrollPageDown\nmap <c-f> scrollFullPageDown\nmap <c-b> scrollFullPageUp\nmap <c-i> goForward\nmap <c-o> goBack\nmap J goForward\nmap K goBack\nmap <c-p> togglePinTab\nmap <c-u> scrollPageUp\nmap d$ closeTabsOnRight\nmap d^ closeTabsOnLeft\nmap",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
-  "newTabUrl": "about:newtab",
+  "newTabUrl": "https://www.google.com/",
   "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
   "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
   "regexFindMode": false,
