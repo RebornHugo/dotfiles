@@ -14,6 +14,10 @@ local servers = {
   "yamlls",
 }
 
+-- In Clangd + CMake project, we should run the following command in build folder
+-- cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+-- Ref: https://www.youtube.com/watch?v=BCuyEdDQ5iA and https://clang.llvm.org/docs/JSONCompilationDatabase.html
+
 lsp_installer.setup()
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
