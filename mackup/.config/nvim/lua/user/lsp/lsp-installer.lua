@@ -12,6 +12,7 @@ local servers = {
   "bashls",
   "jsonls",
   "yamlls",
+  "clangd"
 }
 
 -- In Clangd + CMake project, we should run the following command in build folder

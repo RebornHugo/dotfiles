@@ -76,6 +76,7 @@ keymap("n", "<C-S-j>", "<Esc>:m +1<CR>gi", opts)
 
 -- TODO(Hugo): gitmux installation
 
+-- TODO(Hugo): telescope search only git files, including hiddent file starting with dot.
 
 -- Insert --
 -- Press jk fast to enter
