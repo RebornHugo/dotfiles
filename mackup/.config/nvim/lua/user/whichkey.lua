@@ -215,7 +215,7 @@ local mappings = {
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     f = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
     g = { "<cmd>Telescope git_files<cr>", "Find git files" },
-    t = { "<cmd>Telescope live_grep hidden=true<cr>", "Find Text" },  // TODO: hidden not work!
+    t = { "<cmd>Telescope live_grep hidden=true<cr>", "Find Text" },  -- TODO: hidden not work!
     p = { "<cmd>Telescope projects<cr>", "Find Projects" },
     s = { "<cmd>Telescope grep_string<cr>", "Find String" },
     h = { "<cmd>Telescope help_tags<cr>", "Help" },
