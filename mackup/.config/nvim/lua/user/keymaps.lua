@@ -103,6 +103,7 @@ keymap("v", ">", ">gv", opts)
 
 -- Comment
 -- TODO(Hugo): not need to enter new line if current line is empy
+-- TODO(Hugo): using ctrl to comment, even in the insert_mode it should work
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>+", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
 

@@ -132,17 +132,17 @@ local mappings = {
 --   -- P = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 --   -- ["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Rename" },
 --   -- ["z"] = { "<cmd>ZenMode<cr>", "Zen" },
---   ["gy"] = "Link",
--- 
---   B = {
---     name = "Browse",
---     i = { "<cmd>BrowseInputSearch<cr>", "Input Search" },
---     b = { "<cmd>Browse<cr>", "Browse" },
---     d = { "<cmd>BrowseDevdocsSearch<cr>", "Devdocs" },
---     f = { "<cmd>BrowseDevdocsFiletypeSearch<cr>", "Devdocs Filetype" },
---     m = { "<cmd>BrowseMdnSearch<cr>", "Mdn" },
---   },
--- 
+  -- ["gy"] = "Link",
+
+  B = {
+    name = "Browse",
+    i = { "<cmd>BrowseInputSearch<cr>", "Input Search" },
+    b = { "<cmd>Browse<cr>", "Browse" },
+    d = { "<cmd>BrowseDevdocsSearch<cr>", "Devdocs" },
+    f = { "<cmd>BrowseDevdocsFiletypeSearch<cr>", "Devdocs Filetype" },
+    -- m = { "<cmd>BrowseMdnSearch<cr>", "Mdn" },
+  },
+
   p = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
@@ -152,17 +152,18 @@ local mappings = {
     u = { "<cmd>PackerUpdate<cr>", "Update" },
   },
 -- 
---   o = {
---     name = "Options",
---     c = { '<cmd>lua vim.g.cmp_active=false<cr>', "Completion off" },
---     C = { '<cmd>lua vim.g.cmp_active=true<cr>', "Completion on" },
---     w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
---     r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
---     l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
---     s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
---     t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
--- 
---   },
+  o = {
+    name = "Options",
+    c = { '<cmd>lua vim.g.cmp_active=false<cr>', "Completion off" },
+    C = { '<cmd>lua vim.g.cmp_active=true<cr>', "Completion on" },
+--  TODO(Hugo): add custom function
+    w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
+    r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
+    l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
+    s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
+    t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
+
+  },
 -- 
 --   -- s = {
 --   --   name = "Split",
@@ -182,14 +183,14 @@ local mappings = {
 --     -- a = { ":RestoreSessionFromFile<cr>", "test" },
 --     -- a = { ":DeleteSession<cr>", "test" },
 --   },
--- 
---   r = {
---     name = "Replace",
---     r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
---     w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
---     f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
---   },
--- 
+
+  r = {
+    name = "Replace",
+    r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
+    w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+    f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
+  },
+
 --   d = {
 --     name = "Debug",
 --     b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
