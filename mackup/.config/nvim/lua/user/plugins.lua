@@ -102,6 +102,13 @@ return packer.startup(function(use)
   -- whic-key
   use "folke/which-key.nvim"
 
+  -- Markdown
+  use {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+  }
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
