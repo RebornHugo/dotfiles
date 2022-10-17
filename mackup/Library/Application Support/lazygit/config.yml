@@ -15,28 +15,28 @@ gui:
       - bold
     inactiveBorderColor:
       - white
-    optionsTextColor:
-      - black
-    selectedLineBgColor:
-      - black
-    selectedRangeBgColor:
-      - yellow
-    cherryPickedCommitBgColor:
-      - blue
-    cherryPickedCommitFgColor:
-      - cyan
-    unstagedChangesColor:
-      - white
+    # optionsTextColor:
+    #   - black
+    # selectedLineBgColor:
+    #   - black
+    # selectedRangeBgColor:
+    #   - yellow
+    # cherryPickedCommitBgColor:
+    #   - blue
+    # cherryPickedCommitFgColor:
+    #   - cyan
+    # unstagedChangesColor:
+    #   - white
   commitLength:
     show: true
   mouseEvents: true
   skipUnstageLineWarning: false
   skipStashWarning: true
   showFileTree: true # for rendering changes files in a tree format
-  showListFooter: false # for seeing the '5 of 20' message in list panels
+  showListFooter: true # for seeing the '5 of 20' message in list panels
   showRandomTip: true
-  showCommandLog: false
-  showBottomLine: false
+  showCommandLog: true
+  showBottomLine: true
   commandLogSize: 8
   authorColors: # in case you're not happy with the randomly assigned colour
     'RebornHugo': 'yellow'
