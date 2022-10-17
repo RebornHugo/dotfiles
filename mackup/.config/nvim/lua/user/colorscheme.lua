@@ -1,7 +1,46 @@
+-- local colorscheme = "nightfox"
 local colorscheme = "nightfox"
--- local colorscheme = "darkplus"
 
-if colorscheme == 'nightfox' or colorscheme == 'nordfox' or colorscheme == 'carbonfox' then
+-- Palettes are the base color defines of a colorscheme.
+-- You can override these palettes for each colorscheme defined by nightfox.
+local palettes = {
+  -- Everything defined under `all` will be applied to each style.
+  all = {
+    -- Each palette defines these colors:
+    --   black, red, green, yellow, blue, magenta, cyan, white, orange, pink
+    --
+    -- These colors have 3 shades: base, bright, and dim
+    --
+    -- Defining just a color defines it's base color
+    red = "#ff0000",
+  },
+  nightfox = {
+    -- A specific style's value will be used over the `all`'s value
+    red = "#c94f6d",
+  },
+  dayfox = {
+    -- Defining multiple shades is done by passing a table
+    blue = { base = "#4d688e", bright = "#4e75aa", dim = "#485e7d" },
+  },
+  nordfox = {
+    -- A palette also defines the following:
+    --   bg0, bg1, bg2, bg3, bg4, fg0, fg1, fg2, fg3, sel0, sel1, comment
+    --
+    -- These are the different foreground and background shades used by the theme.
+    -- The base bg and fg is 1, 0 is normally the dark alternative. The others are
+    -- incrementally lighter versions.
+    bg1 = "#2e3440",
+
+    -- sel is different types of selection colors.
+    sel0 = "#1f252e", -- Popup bg, visual selection bg
+    sel1 = "#4f6074", -- Popup uel bg, search bg
+
+    -- comment is the definition of the comment color.
+    comment = "#60728a",
+  },
+}
+
+if colorscheme == 'nightfox' or colorscheme == 'nordfox' or colorscheme == 'carbonfox' or colorscheme == 'dawnfox' then
 -- if colorscheme == "nightfox" then
 -- Default options
   require('nightfox').setup({
@@ -26,14 +65,14 @@ if colorscheme == 'nightfox' or colorscheme == 'nordfox' or colorscheme == 'carb
       },
       inverse = {             -- Inverse highlight for different types
         match_paren = false,
-        visual = false,
+        visual = true,
         search = false,
       },
       modules = {             -- List of various plugins and additional options
         -- ...
       },
     },
-    palettes = {},
+    palettes = palettes,
     specs = {},
     groups = {},
   })
