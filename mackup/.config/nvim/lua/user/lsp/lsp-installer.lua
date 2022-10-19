@@ -3,6 +3,7 @@ if not status_ok then
   return
 end
 
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local servers = {
   "sumneko_lua",
   "cssls",
@@ -12,7 +13,8 @@ local servers = {
   "bashls",
   "jsonls",
   "yamlls",
-  "clangd"
+  "clangd",
+  "cmake"
 }
 
 -- In Clangd + CMake project, we should run the following command in build folder
@@ -21,6 +23,7 @@ local servers = {
 
 lsp_installer.setup()
 
+LSP_SERVER_PATH = "/Users/hugoreborn/.local/share/nvim/lsp_servers"
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
   return
@@ -42,6 +45,11 @@ for _, server in pairs(servers) do
   if server == "pyright" then
     local pyright_opts = require "user.lsp.settings.pyright"
     opts = vim.tbl_deep_extend("force", pyright_opts, opts)
+  end
+
+  if server == "cmake" then
+    local cmake_opts = require "user.lsp.settings.cmake"
+    opts = vim.tbl_deep_extend("force", cmake_opts, opts)
   end
 
   lspconfig[server].setup(opts)

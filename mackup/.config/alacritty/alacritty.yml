@@ -30,6 +30,9 @@ font:
 mouse:
   hide_when_typing: true
   
+# notice we must disable input method shortkey before using vim key_bindings, 
+# ref: https://stackoverflow.com/questions/20245652/how-to-unbind-command-control-space-key-from-mac-os-x-10-9
+
 key_bindings:
 #    A full list with available key codes can be found here:
 #    https://docs.rs/glutin/*/glutin/event/enum.VirtualKeyCode.html#variants

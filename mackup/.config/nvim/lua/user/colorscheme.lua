@@ -1,5 +1,5 @@
--- local colorscheme = "nightfox"
 local colorscheme = "nightfox"
+-- local colorscheme = "nordfox"
 
 -- Palettes are the base color defines of a colorscheme.
 -- You can override these palettes for each colorscheme defined by nightfox.
@@ -40,6 +40,7 @@ local palettes = {
   },
 }
 
+-- TODO: how to set boarder between two windows more clear?
 if colorscheme == 'nightfox' or colorscheme == 'nordfox' or colorscheme == 'carbonfox' or colorscheme == 'dawnfox' then
 -- if colorscheme == "nightfox" then
 -- Default options
@@ -69,7 +70,15 @@ if colorscheme == 'nightfox' or colorscheme == 'nordfox' or colorscheme == 'carb
         search = false,
       },
       modules = {             -- List of various plugins and additional options
-        -- ...
+        -- -- dashboard = true,
+        -- diagnostic = true,
+        -- gitsigns = true,
+        -- -- lsp_saga = true,
+        -- native_lsp = true,
+        -- -- neotree = true,
+        -- telescope = true,
+        -- treesitter = true,
+        -- whichkey = true
       },
     },
     palettes = palettes,

@@ -9,6 +9,7 @@ brew install bat
 brew install fish
 brew install fzf
 # brew install gh
+brew install cmake
 brew install git
 # brew install git-delta
 brew install lazydocker
@@ -77,3 +78,7 @@ if [[ $PLATFORM == 'macos' ]]; then
    # brew install --cask spacelauncher    
    brew install --cask spotify
    brew install --cask sioyek
+
+# pip
+pip3 install black
+pip3 install flake8
