@@ -16,11 +16,16 @@ local diagnostics = {
   always_visible = true,
 }
 
+local icons = require "user.icons"
+local hide_in_width_60 = function()
+  return vim.o.columns > 60
+end
 local diff = {
   "diff",
   colored = false,
-  symbols = { added = "", modified = "", removed = "" }, -- changes diff symbols
-  cond = hide_in_width,
+  symbols = { added = icons.git.Add .. " ", modified = icons.git.Mod .. " ", removed = icons.git.Remove .. " " }, -- changes diff symbols
+  cond = hide_in_width_60,
+  separator = "%#SLSeparator#" .. "│ " .. "%*",
 }
 
 local filetype = {

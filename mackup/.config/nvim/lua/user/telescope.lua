@@ -36,6 +36,7 @@ telescope.setup {
       ".vscode/",
       "__pycache__/",
       "build/",
+      "cmake-build-debug/",
       "env/",
       "gradle/",
       "node_modules/",
@@ -63,6 +64,23 @@ telescope.setup {
       "%.epub",
       "%.flac",
       "%.tar.gz",
+      "%.npz",
+      -- tusimple internal 
+      "ttgen_%/",
+    },
+    -- customize live_grep to support hidden filese, 
+    -- see: https://github.com/nvim-telescope/telescope.nvim/issues/470
+    vimgrep_arguments = {
+      'rg',
+      '--color=never',
+      '--no-heading',
+      '--with-filename',
+      '--line-number',
+      '--column',
+      '--smart-case',
+      -- following is the new thing
+      '-u',
+      '-u',
     },
 
     mappings = {
