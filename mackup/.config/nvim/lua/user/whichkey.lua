@@ -192,18 +192,18 @@ local mappings = {
     f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
   },
 
---   d = {
---     name = "Debug",
---     b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
---     c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
---     i = { "<cmd>lua require'dap'.step_into()<cr>", "Into" },
---     o = { "<cmd>lua require'dap'.step_over()<cr>", "Over" },
---     O = { "<cmd>lua require'dap'.step_out()<cr>", "Out" },
---     r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl" },
---     l = { "<cmd>lua require'dap'.run_last()<cr>", "Last" },
---     u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
---     x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
---   },
+  d = {
+    name = "Debug",
+    b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Breakpoint" },
+    c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+    i = { "<cmd>lua require'dap'.step_into()<cr>", "Into" },
+    o = { "<cmd>lua require'dap'.step_over()<cr>", "Over" },
+    O = { "<cmd>lua require'dap'.step_out()<cr>", "Out" },
+    r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl" },
+    l = { "<cmd>lua require'dap'.run_last()<cr>", "Last" },
+    u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
+    x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
+  },
 -- 
 --   -- nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
 --   -- nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
@@ -272,7 +272,7 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.format({ async = true })<cr>", "Format" },
+    f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
     F = { "<cmd>LspToggleAutoFormat<cr>", "Toggle Autoformat" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     h = { "<cmd>lua require('lsp-inlayhints').toggle()<cr>", "Toggle Hints" },
@@ -356,6 +356,11 @@ local mappings = {
 --   --   n = { "<cmd>TZNarrow<cr>", "Narrow" },
 --   --   f = { "<cmd>TZFocus<cr>", "Focus" },
 --   -- },
+  y = {
+    name = "MISC",
+    a = { ":silent only | Jaq<cr>", "Code Action" },
+    t = { "<esc><cmd>TodoTelescope<cr>", "TODO Telescope" },
+  }
 }
 
 local vopts = {
