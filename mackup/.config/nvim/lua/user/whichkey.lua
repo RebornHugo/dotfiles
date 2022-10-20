@@ -229,6 +229,7 @@ local mappings = {
     R = { "<cmd>Telescope registers<cr>", "Registers" },
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
+    T = { "<cmd>TodoTelescope<cr>", "TODO Telescope" },
   },
 
   g = {
@@ -359,7 +360,6 @@ local mappings = {
   y = {
     name = "MISC",
     a = { ":silent only | Jaq<cr>", "Code Action" },
-    t = { "<esc><cmd>TodoTelescope<cr>", "TODO Telescope" },
   }
 }
 

@@ -14,7 +14,8 @@ local servers = {
   "jsonls",
   "yamlls",
   "clangd",
-  "cmake"
+  "cmake",
+  -- "grammarly"  -- need token
 }
 
 -- In Clangd + CMake project, we should run the following command in build folder
@@ -50,6 +51,11 @@ for _, server in pairs(servers) do
   if server == "cmake" then
     local cmake_opts = require "user.lsp.settings.cmake"
     opts = vim.tbl_deep_extend("force", cmake_opts, opts)
+  end
+
+  if server == "grammarly" then
+    local grammarly_opts = require "user.lsp.settings.grammarly"
+    opts = vim.tbl_deep_extend("force", grammarly_opts, opts)
   end
 
   lspconfig[server].setup(opts)
