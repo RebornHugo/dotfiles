@@ -53,8 +53,6 @@ return packer.startup(function(use)
   use { "lewis6991/impatient.nvim", commit = "969f2c5c90457612c09cf2a13fee1adaa986d350" }
   use { "lukas-reineke/indent-blankline.nvim", commit = "6177a59552e35dfb69e1493fd68194e673dc3ee2" }
 
--- TODO: update to NeoVim 0.8, using mason instead of lsp-installer
-  
   -- Statusline
   use { "nvim-lualine/lualine.nvim", commit = "3362b28f917acc37538b1047f187ff1b5645ecdd" }
 
@@ -65,8 +63,16 @@ return packer.startup(function(use)
   use { "folke/tokyonight.nvim", commit = "8223c970677e4d88c9b6b6d81bda23daf11062bb" }
   use { "lunarvim/darkplus.nvim", commit = "2584cdeefc078351a79073322eb7f14d7fbb1835" }
   use { "LunarVim/onedarker.nvim" }
-  use {"EdenEast/nightfox.nvim"}
-
+  use  {"EdenEast/nightfox.nvim" }
+  use {
+    "catppuccin/nvim",
+    as = "catppuccin",
+    -- config = function()
+    --   vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
+    --   require("catppuccin").setup()
+    --   vim.api.nvim_command "colorscheme catppuccin"
+    -- end
+  }
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" } -- buffer completions

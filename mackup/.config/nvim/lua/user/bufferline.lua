@@ -10,6 +10,20 @@ bufferline.setup {
     offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
     separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
   },
+  -- highlights = require("catppuccin.groups.integrations.bufferline").get {
+  --   styles = { "italic", "bold" },
+  --   custom = {
+  --     all = {
+  --       fill = { bg = "#000000" },
+  --     },
+  --     mocha = {
+  --       background = { fg = mocha.text },
+  --     },
+  --     latte = {
+  --       background = { fg = "#000000" },
+  --     },
+  --   },
+  -- },
   highlights = {
     fill = {
       guifg = { attribute = "fg", highlight = "#ff0000" },

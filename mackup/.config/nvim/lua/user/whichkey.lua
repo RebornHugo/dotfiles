@@ -359,7 +359,7 @@ local mappings = {
 --   -- },
   y = {
     name = "MISC",
-    a = { ":silent only | Jaq<cr>", "Code Action" },
+    r = { ":silent only | Jaq<cr>", "Run Code" },
   }
 }
 

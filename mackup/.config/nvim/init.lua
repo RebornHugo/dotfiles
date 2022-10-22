@@ -1,9 +1,11 @@
+-- require "user.hot-reload"
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
 require "user.autocommands"
 require "user.colorscheme"
 require "user.cmp"
+require "user.navic"  -- not work?
 require "user.telescope"
 require "user.treesitter"
 require "user.autopairs"
