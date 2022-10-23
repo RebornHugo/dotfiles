@@ -8,6 +8,7 @@
 - [ ] ctrl-^ not work in nvim with alacritty
 - [ ] latex with grammarly integration
 - [ ] navic integration
+- [ ] lsp-inlayhints integration
 - [ ] update to NeoVim 0.8, using mason instead of lsp-installer
 - [ ] lualine show lsp-signature
 - [ ] check symbols
