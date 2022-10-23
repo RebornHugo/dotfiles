@@ -281,23 +281,35 @@ local progress = {
   padding = 0,
 }
 
+-- FIXME: signature in lualine not work.
 local current_signature = {
-  function()
+  "LspSignature",
+  fmt = function(str)
+    if true then
+      return ""
+    end
+
+    -- if not pcall(require, 'lsp_signature') then return end
+    -- local sig = require("lsp_signature").status_line(30)
+    -- return sig.label .. "🐼" .. sig.hint
+
     local buf_ft = vim.bo.filetype
 
     if buf_ft == "toggleterm" or buf_ft == "TelescopePrompt" then
-      return ""
+      return buf_ft
     end
     if not pcall(require, "lsp_signature") then
-      return ""
+      return "lsp_signature_not_installed"
     end
-    local sig = require("lsp_signature").status_line(30)
+    local sig = require("lsp_signature").status_line(100)
     local hint = sig.hint
 
     if not require("user.functions").isempty(hint) then
       -- return "%#SLSeparator#│ : " .. hint .. "%*"
       -- return "%#SLSeparator#│ " .. hint .. "%*"
-      return "%#SLSeparator# " .. hint .. "%*"
+      -- return "%#SLSeparator# " .. hint .. "%*"
+    return sig.label
+    -- return sig.label .. "🐼" .. sig.hint
     end
 
     return ""

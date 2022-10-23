@@ -79,6 +79,7 @@ if [[ $PLATFORM == 'macos' ]]; then
    brew install --cask spotify
    brew install --cask sioyek
 
-# pip
+# lsp
 pip3 install black
 pip3 install flake8
+brew install shellcheck

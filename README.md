@@ -9,3 +9,7 @@
 - [ ] latex with grammarly integration
 - [ ] navic integration
 - [ ] update to NeoVim 0.8, using mason instead of lsp-installer
+- [ ] lualine show lsp-signature
+- [ ] check symbols
+- [ ] get project overview, ref: https://github.com/ray-x/nvim
+- [ ] cursor 
