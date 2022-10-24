@@ -15,3 +15,4 @@
 - [ ] get project tree, ref: https://github.com/ray-x/nvim
 - [ ] Cursor could be more clear 
 - [ ] yabai restore layout after rebooting
+- [ ] clang-format LSP

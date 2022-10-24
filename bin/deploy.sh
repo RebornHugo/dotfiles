@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 cd ~ && mkdir -p Workspace/Coding && cd Workspace/Coding 
 git clone https://github.com/RebornHugo/dotfiles.git dotfiles
@@ -38,6 +38,7 @@ if [[ $PLATFORM == 'macos' ]]; then
    brew services start skhd
    brew install yabai
    brew services start yabai
+fi
 
 
 # mackup
@@ -78,6 +79,7 @@ if [[ $PLATFORM == 'macos' ]]; then
    # brew install --cask spacelauncher    
    brew install --cask spotify
    brew install --cask sioyek
+fi
 
 # lsp
 pip3 install black

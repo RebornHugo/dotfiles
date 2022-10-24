@@ -8,7 +8,7 @@ require "user.cmp"
 require "user.navic"  -- not work?
 require "user.lsp-inlayhints"
 require "user.telescope"
-require "user.treesitter"  -- FIXME: not work in neovim 0.8
+require "user.treesitter"
 require "user.autopairs"
 require "user.comment"
 require "user.gitsigns"
