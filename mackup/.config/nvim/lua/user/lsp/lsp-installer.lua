@@ -1,3 +1,4 @@
+-- Deprecated... Using mason instead since neovim0.8
 local status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
 if not status_ok then
   return

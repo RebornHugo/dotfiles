@@ -14,3 +14,4 @@
 - [ ] check symbols
 - [ ] get project overview, ref: https://github.com/ray-x/nvim
 - [ ] cursor 
+- [ ] Update plugins for neovim0.8, starting from LSP..
