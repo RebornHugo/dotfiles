@@ -360,6 +360,7 @@ local mappings = {
   y = {
     name = "MISC",
     r = { ":silent only | Jaq<cr>", "Run Code" },
+    m = { ":MarkdownPreviewToggle<cr>", "Markdown" },
   }
 }
 

@@ -1,4 +1,5 @@
 local colorscheme = "catppuccin"
+-- local colorscheme = "darkplus"
 -- local colorscheme = "nightfox"
 
 -- Palettes are the base color defines of a colorscheme.

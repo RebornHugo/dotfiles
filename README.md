@@ -1,17 +1,17 @@
 # Hugo's dotfiles
 
 # TODO
-- [ ] customize FZF search rules, it can be the same as telescope.lua
+- [ ] customize FZF search rules in terminal, it can be the same like telescope.lua
 - [ ] nvim entry telescope doesn't show hidden files
-- [ ] use hot-reload
+- [x] use hot-reload
 - [ ] catppucin bufferline icon
-- [ ] ctrl-^ not work in nvim with alacritty
+- [ ] ctrl-^,1,2,3... not work in nvim with alacritty
 - [ ] latex with grammarly integration
 - [ ] navic integration
-- [ ] lsp-inlayhints integration
-- [ ] update to NeoVim 0.8, using mason instead of lsp-installer
-- [ ] lualine show lsp-signature
+- [x] lsp-inlayhints integration
+- [x] update to NeoVim 0.8, using mason instead of lsp-installer
+- [x] lualine show lsp-signature
 - [ ] check symbols
-- [ ] get project overview, ref: https://github.com/ray-x/nvim
-- [ ] cursor 
-- [ ] Update plugins for neovim0.8, starting from LSP..
+- [ ] get project tree, ref: https://github.com/ray-x/nvim
+- [ ] Cursor could be more clear 
+- [ ] yabai restore layout after rebooting

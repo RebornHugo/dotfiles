@@ -2,6 +2,7 @@
 
 # when using multiple desktops, disable auto-reorder
 # https://apple.stackexchange.com/questions/215240/how-do-i-get-commandtab-to-stop-re-ordering-spaces
+# when alt+tab not works, https://github.com/koekeishiya/yabai/issues/697#issuecomment-713479213
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 
