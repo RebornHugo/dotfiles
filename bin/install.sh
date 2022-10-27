@@ -26,6 +26,9 @@ brew install tmux
 # brew install wakatime-cli
 brew install zoxide
 
+# wget https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_macOS_amd64.tar.gz
+# unzip and move to /usr/local/bin/gitmux
+
 # brew tap clementtsang/bottom
 # brew install bottom
 # brew tap federico-terzi/espanso

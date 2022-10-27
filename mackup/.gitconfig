@@ -5,7 +5,7 @@
 ; 	insteadOf = https://github.com/
 [core]
 	editor = nvim
- 	; excludesfile = /Users/joshmedeski/.gitignore
+ 	; excludesfile = /Users/hugoreborn/.gitignore
   pager = delta
 [interactive]
 	diffFilter = delta --color-only
