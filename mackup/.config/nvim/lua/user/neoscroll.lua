@@ -19,8 +19,11 @@ neoscroll.setup {
 local t = {}
 -- Syntax: t[keys] = {function, {function arguments}}
 -- Use the "sine" easing function
-t['<C-u>'] = {'scroll', {'-vim.wo.scroll', 'true', '600', [['circular']]}}
-t['<C-d>'] = {'scroll', { 'vim.wo.scroll', 'true', '600', [['circular']]}}
+-- quadratic, cubic, quartic, quintic, circular, sine
+-- t['<C-u>'] = {'scroll', {'-vim.wo.scroll', 'true', '600', [['cubic']]}}
+-- t['<C-d>'] = {'scroll', { 'vim.wo.scroll', 'true', '600', [['cubic']]}}
+t['<C-u>'] = {'scroll', {'-vim.wo.scroll', 'true', '150', [['sine']]}}
+t['<C-d>'] = {'scroll', { 'vim.wo.scroll', 'true', '150', [['sine']]}}
 -- Use the "circular" easing function
 t['<C-b>'] = {'scroll', {'-vim.api.nvim_win_get_height(0)', 'true', '500', [['circular']]}}
 t['<C-f>'] = {'scroll', { 'vim.api.nvim_win_get_height(0)', 'true', '500', [['circular']]}}
