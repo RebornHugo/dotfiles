@@ -281,7 +281,7 @@ local progress = {
   padding = 0,
 }
 
--- FIXME: signature in lualine not work.
+-- detailed signature config is in user.lsp.lsp-sinagure.lua
 local current_signature = {
   "LspSignature",
   fmt = function(str)

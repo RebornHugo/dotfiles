@@ -1,4 +1,4 @@
-local status_ok, signature = pcall(require, "lsp_signature")  -- FIXME: not working in lualine
+local status_ok, signature = pcall(require, "lsp_signature")
 
 if not status_ok then
   return

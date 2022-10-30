@@ -49,34 +49,18 @@ keymap("v", "p", '"_dP', opts)
 -- refer to:  https://github.com/sdaschner/dotfiles/blob/master/.ideavimrc
 -- TODO(Hugo): Better delete with _dP
 
--- TODO(Hugo): Better foramt all code
-
--- TODO(Hugo): show leader key prompt (using vim which key https://www.youtube.com/watch?v=BdoizYjJHis)
-
 -- TODO(Hugo): comment and move cursor to new line? (if current line is empty, dont move to new line..)
 
 -- TODO(Hugo): move current/selected line up/down, using ctrl+shift+j/k, ref: https://www.reddit.com/r/neovim/comments/mbj8m5/how_to_setup_ctrlshiftkey_mappings_in_neovim_and/
 keymap("n", "<C-S-j>", "<Esc>:m +1<CR>gi", opts)
 
--- TODO(Hugo): goto TODO/FIXME/XXX (ref: https://github.com/folke/todo-comments.nvim)
-
 -- TODO(Hugo): goto Marks
-
--- TODO(Hugo): Better git integration, e.g. git blame (already have gitsigns)
 
 -- TODO(Hugo): dont overwrite key <H> and <G>
 
--- TODO(Hugo): debugger integration
-
 -- TODO(Hugo): fzf integration
 
--- TODO(Hugo): vimium, redefine <S-H> / <S-L> as tab move
-
 -- TODO(Hugo): NvimTree is not updated when new file is added
-
--- TODO(Hugo): gitmux installation
-
--- TODO(Hugo): telescope search only git files, including hiddent file starting with dot.
 
 -- TODO(Hugo): last tab / buffer
 

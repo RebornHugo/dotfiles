@@ -10,3 +10,5 @@ colorscheme default
 filetype plugin on
 syntax on
 
+" share clipboard
+set clipboard=unnamedplus

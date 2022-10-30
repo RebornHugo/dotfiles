@@ -1,3 +1,4 @@
+vim.o.termguicolors = true
 local colorscheme = "catppuccin"
 -- local colorscheme = "darkplus"
 -- local colorscheme = "nightfox"
