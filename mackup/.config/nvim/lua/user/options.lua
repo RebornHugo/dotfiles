@@ -1,9 +1,5 @@
--- TODO(Hugo): show leader key's prompt (using which-key)
--- TODO(Hugo): fzf/telescope only git files
--- TODO(Hugo): show document of method/function (using shift-k)
 -- TODO(Hugo): cspell
 -- TODO(Hugo): latex
--- TODO(Hugo): markdown
 vim.opt.backup = false                          -- creates a backup file
 vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
 vim.opt.cmdheight = 1                           -- more space in the neovim command line for displaying messages
@@ -45,3 +41,5 @@ vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
+vim.opt.wrap = true
+-- vim.opt.list = true

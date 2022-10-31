@@ -1,7 +1,5 @@
 vim.o.termguicolors = true
-local colorscheme = "catppuccin"
--- local colorscheme = "darkplus"
--- local colorscheme = "nightfox"
+local colorscheme = "catppuccin"  -- darkplus onedarker nightfox nordfox catppuccin
 
 -- Palettes are the base color defines of a colorscheme.
 -- You can override these palettes for each colorscheme defined by nightfox.

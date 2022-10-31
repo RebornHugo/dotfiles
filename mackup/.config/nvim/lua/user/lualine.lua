@@ -196,7 +196,7 @@ local diagnostics = {
 
 local diff = {
   "diff",
-  colored = false,
+  colored = true,
   symbols = { added = icons.git.Add .. " ", modified = icons.git.Mod .. " ", removed = icons.git.Remove .. " " }, -- changes diff symbols
   cond = hide_in_width_60,
   separator = "%#SLSeparator#" .. "│ " .. "%*",
