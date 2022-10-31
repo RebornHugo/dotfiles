@@ -16,4 +16,5 @@
 - [ ] Cursor could be more clear 
 - [ ] yabai restore layout after rebooting
 - [ ] clang-format LSP
-- [x] harpoon and marks UI
+- [ ] harpoon and marks UI
+- [ ] show space and new line
