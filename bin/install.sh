@@ -89,3 +89,6 @@ pip3 install black
 pip3 install flake8
 brew install shellcheck
 npx @johnnymorganz/stylua-bin --help  # lua format still not work..
+
+# dap
+pip3 install debugy

@@ -97,7 +97,8 @@ return packer.startup(function(use)
   use "ray-x/lsp_signature.nvim"
   use "SmiteshP/nvim-navic"
   use "lvimuser/lsp-inlayhints.nvim"
--- TODO: what's lsp-saga
+  use "simrat39/symbols-outline.nvim"
+  -- TODO: what's lsp-saga
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
