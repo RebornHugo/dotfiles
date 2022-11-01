@@ -1,3 +1,4 @@
+-- TODO: refactor
 vim.o.termguicolors = true
 local colorscheme = "catppuccin"  -- darkplus onedarker nightfox nordfox catppuccin
 
@@ -89,11 +90,14 @@ end
 
 if colorscheme == 'catppuccin' then
 
-  vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
-  -- require("catppuccin").setup()
+  -- vim.g.catppuccin_flavour = "mocha" -- latte, frappe, macchiato, mocha
   -- vim.api.nvim_command "colorscheme catppuccin"
-
   require("catppuccin").setup({
+    flavour = "mocha", -- latte, frappe, macchiato, mocha
+    background = { -- :h background
+      light = "latte",
+      dark = "mocha",
+    },
     compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
     transparent_background = true,
     term_colors = false,
@@ -116,40 +120,16 @@ if colorscheme == 'catppuccin' then
       types = {},
       operators = {},
     },
+    color_overrides = {},
+    custom_highlights = {},
     integrations = {
       cmp = true,
       gitsigns = true,
       nvimtree = true,
       telescope = true,
       treesitter = true,
-      markdown = true,
-      dap = {
-        enabled = true,
-        enable_ui = true, -- enable nvim-dap-ui
-      },
-      native_lsp = {
-        enabled = true,
-        virtual_text = {
-          errors = { "italic" },
-          hints = { "italic" },
-          warnings = { "italic" },
-          information = { "italic" },
-        },
-        underlines = {
-          errors = { "underline" },
-          hints = { "underline" },
-          warnings = { "underline" },
-          information = { "underline" },
-        },
-      },
-      navic = {
-        enabled = true,
-        custom_bg = "NONE",
-      },
       -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
     },
-    color_overrides = {},
-    custom_highlights = {},
   })
 end
 
