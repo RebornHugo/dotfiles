@@ -54,6 +54,10 @@ nnoremap <leader>h :nohlsearch<CR>
 
 " search
 " noremap / <ESC>:action Find<CR>
+" TODO: try additionally native search
+
+" replace
+noremap <leader>r :action Replace<CR>
 
 
 set NERDTree

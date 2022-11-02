@@ -100,8 +100,13 @@ return packer.startup(function(use)
   use "simrat39/symbols-outline.nvim"
   -- TODO: what's lsp-saga
 
+  -- Marks
+  use "christianchiarulli/harpoon"
+  -- use "MattesGroeger/vim-bookmarks"
+
   -- Telescope
   use { "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" }
+  use "tom-anders/telescope-vim-bookmarks.nvim"
 
   -- Treesitter
   use {

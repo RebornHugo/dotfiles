@@ -90,17 +90,17 @@ local m_opts = {
 }
 
 local m_mappings = {
-  a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
-  c = { "<cmd>silent BookmarkClear<cr>", "Clear" },
-  b = { "<cmd>silent BookmarkToggle<cr>", "Toggle" },
+  -- a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
+  -- c = { "<cmd>silent BookmarkClear<cr>", "Clear" },
+  -- b = { "<cmd>silent BookmarkToggle<cr>", "Toggle" },
   m = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
   ["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
   [","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
-  l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
-  j = { "<cmd>silent BookmarkNext<cr>", "Next" },
+  -- l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
+  -- j = { "<cmd>silent BookmarkNext<cr>", "Next" },
   s = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
-  k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
-  S = { "<cmd>silent BookmarkShowAll<cr>", "Prev" },
+  -- k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
+  -- S = { "<cmd>silent BookmarkShowAll<cr>", "Prev" },
   -- s = {
   --   "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
   --   "Show",
@@ -157,7 +157,7 @@ local mappings = {
     c = { '<cmd>lua vim.g.cmp_active=false<cr>', "Completion off" },
     C = { '<cmd>lua vim.g.cmp_active=true<cr>', "Completion on" },
 --  TODO(Hugo): add custom function
---  TODO(Hugo): fix Ctrl-P not work
+--  TODO(Hugo): add function show invisible char. listchars=tab:›\ ,eol:¬,trail:⋅
     w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
     r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
     l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
@@ -187,9 +187,11 @@ local mappings = {
 
   r = {
     name = "Replace",
-    r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
+    R = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
     w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
     f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
+    -- r = { "<cmd>lua require('spectre').open_visual({select_word=true}).open_file_search()<cr>", "Replace Word in Buffer" },
+    -- TODO: support replace world in current buffer using select_word
   },
 
   d = {
