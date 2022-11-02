@@ -15,6 +15,9 @@
 - [ ] Cursor could be clearer
 - [ ] yabai restore layout after rebooting
 - [ ] clang-format LSP
-- [ ] harpoon and marks UI
+- [x] harpoon and marks UI
 - [ ] show space and new line
 - [ ] rename windows by host name
+- [ ] Beancount
+- [ ] Zen mode
+- [ ] wait for official spectre with current file option

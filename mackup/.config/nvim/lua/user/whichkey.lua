@@ -90,17 +90,18 @@ local m_opts = {
 }
 
 local m_mappings = {
-  -- a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
-  -- c = { "<cmd>silent BookmarkClear<cr>", "Clear" },
-  -- b = { "<cmd>silent BookmarkToggle<cr>", "Toggle" },
   m = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
   ["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
   [","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
+  s = { "<cmd>Telescope harpoon marks<cr>", "Harpoon Search" },
+
+  a = { "<cmd>silent BookmarkAnnotate<cr>", "Annotate" },
+  c = { "<cmd>silent BookmarkClear<cr>", "Clear" },
+  b = { "<cmd>silent BookmarkToggle<cr>", "Toggle" },
   -- l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },
-  -- j = { "<cmd>silent BookmarkNext<cr>", "Next" },
-  s = { "<cmd>Telescope harpoon marks<cr>", "Search Files" },
-  -- k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
-  -- S = { "<cmd>silent BookmarkShowAll<cr>", "Prev" },
+  j = { "<cmd>silent BookmarkNext<cr>", "Next" },
+  k = { "<cmd>silent BookmarkPrev<cr>", "Prev" },
+  S = { "<cmd>silent BookmarkShowAll<cr>", "Show" },
   -- s = {
   --   "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>",
   --   "Show",
@@ -189,9 +190,9 @@ local mappings = {
     name = "Replace",
     R = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
     w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
-    f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
-    -- r = { "<cmd>lua require('spectre').open_visual({select_word=true}).open_file_search()<cr>", "Replace Word in Buffer" },
-    -- TODO: support replace world in current buffer using select_word
+    f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace in File" },
+    -- https://github.com/nvim-pack/nvim-spectre/issues/93
+    r = { "<cmd>lua require('spectre').open_visual({select_word=true, current_file=true})<cr>", "Replace Word in File" },
   },
 
   d = {
@@ -219,7 +220,7 @@ local mappings = {
     c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
     f = { "<cmd>Telescope find_files hidden=true<cr>", "Find files" },
     g = { "<cmd>Telescope git_files<cr>", "Find git files" },
-    t = { "<cmd>Telescope live_grep hidden=true<cr>", "Find Text" },  -- TODO: hidden not work!
+    t = { "<cmd>Telescope live_grep hidden=true<cr>", "Find Text" },  -- hidden is configed in telescope.lua: '-u' 
     p = { "<cmd>Telescope projects<cr>", "Find Projects" },
     s = { "<cmd>Telescope grep_string<cr>", "Find String" },
     h = { "<cmd>Telescope help_tags<cr>", "Help" },
