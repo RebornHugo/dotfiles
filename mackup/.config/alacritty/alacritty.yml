@@ -25,7 +25,6 @@ font:
     family: "SFMono Nerd Font"
     style: Regular
   size: 18.0
-  use_thin_strokes: true
 
 mouse:
   hide_when_typing: true
@@ -82,3 +81,6 @@ key_bindings:
   # ---------------------------------------------------------------
   # following is nvim related
   # Move line up
+
+  # vim most recent buffer
+  - { key: Key6, mods: Control, chars: "\x1e" }

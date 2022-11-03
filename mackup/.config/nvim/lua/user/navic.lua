@@ -4,9 +4,7 @@ if not status_ok then
 end
 
 local icons = require "user.icons"
-
-
-navic.setup {
+options = {
   icons = {
     File = ' ',
     Module = ' ',
@@ -41,3 +39,5 @@ navic.setup {
   depth_limit = 0,
   depth_limit_indicator = "..",
 }
+
+return navic

@@ -286,6 +286,7 @@ local progress = {
 local current_signature = {
   "LspSignature",
   fmt = function(str)
+-- NOTE: empty signature in lualine
     if true then
       return ""
     end
@@ -463,6 +464,11 @@ local location = {
   padding = 0,
 }
 
+local navic_status_ok, navic = pcall(require, "user.navic")
+-- if not navic_status_ok then
+--   return
+-- end
+
 lualine.setup {
   options = {
     globalstatus = true,
@@ -478,8 +484,8 @@ lualine.setup {
     lualine_a = { left_pad, mode, branch, right_pad },
     -- lualine_a = { mode, branch },
     lualine_b = { left_pad_alt, diagnostics, right_pad_alt },
-    -- lualine_c = {},
-    lualine_c = { current_signature },
+    -- lualine_c = { current_signature },
+    lualine_c = { { navic.get_location, cond = navic.is_available }, },
     -- lualine_x = { diff, spaces, "encoding", filetype },
     lualine_x = { diff, lanuage_server, spaces, filetype },
     -- lualine_x = { lanuage_server, spaces, filetype },

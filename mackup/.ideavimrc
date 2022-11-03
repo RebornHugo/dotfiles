@@ -50,7 +50,7 @@ nmap <leader>e <action>(GotoNextError)
 nnoremap <leader><leader> <C-Tab>
 
 " clear highlight of search
-nnoremap <leader>h :nohlsearch<CR>
+nnoremap <backspace> :nohlsearch<CR>
 
 " search
 " noremap / <ESC>:action Find<CR>

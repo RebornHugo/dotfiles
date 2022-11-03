@@ -1,6 +1,7 @@
 [user]
 	name = RebornHugo
-	email = hugo@nuaa.edu.cn
+	; email = hugo@nuaa.edu.cn
+	email = kiss152535@gmail.com
 ; [url "git@github.com:"]
 ; 	insteadOf = https://github.com/
 [core]
@@ -21,3 +22,6 @@
 	tool = vimdiff
 [mergetool]
 	path = nvim
+[alias]
+  new = checkout -b
+  ; llog = log --graph --name-status --pretty=format:\"%C(red)%h %C(reset)(%cd) %C(green)%an %Creset%s %C(yellow)%d%Creset\" --date=relative
