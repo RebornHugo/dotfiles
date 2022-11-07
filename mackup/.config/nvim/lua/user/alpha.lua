@@ -25,9 +25,10 @@ dashboard.section.buttons.val = {
   button("f", " " .. " Find file", ":Telescope find_files <CR>"),
   button("e", " " .. " New file", ":ene <BAR> startinsert <CR>"),
   button("p", " " .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
+  button("g", " " .. " Git Files", ":Telescope git_files <CR>"),
   button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
   button("t", " " .. " Find text", ":Telescope live_grep <CR>"),
-  button("s", icons.ui.SignIn .. "  Find Session", ":SearchSession<CR>"),
+  -- button("s", icons.ui.SignIn .. "  Find Session", ":SearchSession<CR>"),
   button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
   button("q", " " .. " Quit", ":qa<CR>"),
 }

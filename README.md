@@ -23,3 +23,4 @@
 - [ ] wait for official spectre with current file option
 - [ ] clipboard feature: save current clipboard content.
 - [ ] neoscrollbar
+- [ ] dockerfile syntax
