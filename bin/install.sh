@@ -86,10 +86,10 @@ if [[ $PLATFORM == 'macos' ]]; then
 fi
 
 # lsp
-pip3 install black
-pip3 install flake8
-brew install shellcheck
-npx @johnnymorganz/stylua-bin --help  # lua format still not work..
+# pip3 install black
+# pip3 install flake8
+# brew install shellcheck
+# npx @johnnymorganz/stylua-bin --help  # lua format still not work..
 
 # dap
 pip3 install debugy

@@ -14,13 +14,13 @@
 - [x] get project tree, ref: https://github.com/ray-x/nvim
 - [ ] Cursor could be clearer
 - [ ] yabai restore layout after rebooting
-- [ ] clang-format LSP
 - [x] harpoon and marks UI
-- [ ] show space and new line symbols
+- [x] show space and new line symbols(wrap in whichkey)
 - [ ] tmux: auto rename windows by host name
 - [ ] Beancount
-- [ ] Zen mode
 - [ ] wait for official spectre with current file option
 - [ ] clipboard feature: save current clipboard content.
 - [ ] neoscrollbar
 - [ ] dockerfile syntax
+- [ ] disable virtual text using whichkey lsp line
+- [ ] better DAP: https://github.com/LunarVim/starter.lvim/blob/c-ide/config.lua 

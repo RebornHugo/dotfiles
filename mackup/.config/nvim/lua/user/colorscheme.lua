@@ -1,6 +1,6 @@
 -- TODO: refactor
 vim.o.termguicolors = true
-local colorscheme = "catppuccin"  -- darkplus onedarker nightfox nordfox catppuccin
+local colorscheme = "nightfox"  -- darkplus onedarker nightfox nordfox catppuccin
 
 -- Palettes are the base color defines of a colorscheme.
 -- You can override these palettes for each colorscheme defined by nightfox.
@@ -55,10 +55,10 @@ if colorscheme == 'nightfox' or colorscheme == 'nordfox' or colorscheme == 'carb
       dim_inactive = false,   -- Non focused panes set to alternative background
       styles = {              -- Style to be applied to different syntax groups
         comments = "italic",    -- Value is any valid attr-list value `:help attr-list`
-        conditionals = "NONE",
+        conditionals = "italic",
         constants = "NONE",
         functions = "NONE",
-        keywords = "NONE",
+        keywords = "italic",
         numbers = "NONE",
         operators = "NONE",
         strings = "NONE",
@@ -109,9 +109,9 @@ if colorscheme == 'catppuccin' then
     styles = {
       comments = { "italic" },
       conditionals = { "italic" },
-      loops = {},
+      loops = { "italic" },
       functions = {},
-      keywords = {},
+      keywords = { "italic" },
       strings = {},
       variables = {},
       numbers = {},

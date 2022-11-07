@@ -116,4 +116,10 @@ function M.smart_quit()
   end
 end
 
+function M.concat_array(a, b)
+    local unpack = unpack or table.unpack
+    local result = {unpack(a)}
+    table.move(b, 1, #b, #result + 1, result)
+    return result
+end
 return M
