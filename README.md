@@ -22,5 +22,5 @@
 - [ ] clipboard feature: save current clipboard content.
 - [ ] neoscrollbar
 - [ ] dockerfile syntax
-- [ ] disable virtual text using whichkey lsp line
+- [x] disable virtual text using whichkey lsp line
 - [ ] better DAP: https://github.com/LunarVim/starter.lvim/blob/c-ide/config.lua 

@@ -40,12 +40,12 @@ local settings = {
 	max_concurrent_installers = 4,
 }
 
-local all_servers =
-	require("user.functions").concat_array(require("user.functions").concat_array(servers, linters), formatters)
-
+-- local all_servers =
+-- 	require("user.functions").concat_array(require("user.functions").concat_array(servers, linters), formatters)
+local all_servers = vim.tbl_extend('keep', servers, linters, formatters)
 require("mason").setup(settings)
 require("mason-lspconfig").setup({
-	ensure_installed = servers,
+	ensure_installed = all_servers,
 	automatic_installation = true,
 })
 

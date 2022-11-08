@@ -75,6 +75,10 @@ return packer.startup(function(use)
     --   vim.api.nvim_command "colorscheme catppuccin"
     -- end
   }
+
+  -- color
+  use { "NvChad/nvim-colorizer.lua" }
+
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions
@@ -98,6 +102,8 @@ return packer.startup(function(use)
   use "SmiteshP/nvim-navic"
   use "lvimuser/lsp-inlayhints.nvim"
   use "simrat39/symbols-outline.nvim"
+  use "p00f/clangd_extensions.nvim"
+  use "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
   -- TODO: what's lsp-saga
 
   -- Marks

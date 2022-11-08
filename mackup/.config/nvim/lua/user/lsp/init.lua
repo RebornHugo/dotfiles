@@ -31,11 +31,11 @@ require("user.lsp.handlers").setup()
 require "user.lsp.null-ls"
 
 -- TODO: add lsp_lines
--- local l_status_ok, lsp_lines = pcall(require, "lsp_lines")
--- if not l_status_ok then
---   return
--- end
+local l_status_ok, lsp_lines = pcall(require, "lsp_lines")
+if not l_status_ok then
+  return
+end
 
--- lsp_lines.setup()
+lsp_lines.setup()
 
 return M

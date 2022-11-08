@@ -117,6 +117,7 @@ function M.smart_quit()
 end
 
 function M.concat_array(a, b)
+    -- we can use vim.deep_extend directly
     local unpack = unpack or table.unpack
     local result = {unpack(a)}
     table.move(b, 1, #b, #result + 1, result)

@@ -1,6 +1,6 @@
 -- TODO: refactor
 vim.o.termguicolors = true
-local colorscheme = "nightfox"  -- darkplus onedarker nightfox nordfox catppuccin
+local colorscheme = "nightfox"  -- darkplus onedarker nightfox nordfox terafox catppuccin
 
 -- Palettes are the base color defines of a colorscheme.
 -- You can override these palettes for each colorscheme defined by nightfox.
@@ -42,7 +42,7 @@ local palettes = {
 }
 
 -- TODO: how to set boarder between two windows be more clear?
-if colorscheme == 'nightfox' or colorscheme == 'nordfox' or colorscheme == 'carbonfox' or colorscheme == 'dawnfox' then
+if colorscheme == 'nightfox' or colorscheme == 'nordfox' or colorscheme == 'carbonfox' or colorscheme == 'dawnfox' or colorscheme == 'terafox' then
 -- if colorscheme == "nightfox" then
 -- Default options
   require('nightfox').setup({
@@ -129,6 +129,14 @@ if colorscheme == 'catppuccin' then
       telescope = true,
       treesitter = true,
       -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    },
+    highlight_overrides = {
+      mocha = function(mocha)
+          return {
+              Comment = { fg = mocha.flamingo },
+              CursorLine = { bg = mocha.mantle },
+          }
+      end,
     },
   })
 end
