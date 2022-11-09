@@ -1,6 +1,6 @@
 -- TODO: refactor
 vim.o.termguicolors = true
-local colorscheme = "nightfox"  -- darkplus onedarker nightfox nordfox terafox catppuccin
+local colorscheme = "catppuccin"  -- darkplus onedarker nightfox nordfox terafox catppuccin
 
 -- Palettes are the base color defines of a colorscheme.
 -- You can override these palettes for each colorscheme defined by nightfox.
@@ -133,7 +133,7 @@ if colorscheme == 'catppuccin' then
     highlight_overrides = {
       mocha = function(mocha)
           return {
-              Comment = { fg = mocha.flamingo },
+              -- Comment = { fg = mocha.flamingo },
               CursorLine = { bg = mocha.mantle },
           }
       end,

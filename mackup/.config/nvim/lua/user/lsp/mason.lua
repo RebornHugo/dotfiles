@@ -23,6 +23,9 @@ local formatters = {
 	"shfmt", -- bash
 }
 
+local daps = {
+	"debugpy",
+}
 -- In Clangd + CMake project, we should run the following command in build folder
 -- cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
 -- Ref: https://www.youtube.com/watch?v=BCuyEdDQ5iA and https://clang.llvm.org/docs/JSONCompilationDatabase.html
@@ -42,7 +45,7 @@ local settings = {
 
 -- local all_servers =
 -- 	require("user.functions").concat_array(require("user.functions").concat_array(servers, linters), formatters)
-local all_servers = vim.tbl_extend('keep', servers, linters, formatters)
+local all_servers = vim.tbl_extend('keep', servers, linters, formatters, daps)
 require("mason").setup(settings)
 require("mason-lspconfig").setup({
 	ensure_installed = all_servers,
