@@ -1,4 +1,4 @@
-# Hugo's dotfiles
+# Hugo's dotfilesreard
 
 # TODO
 <!-- - [ ] customize FZF search rules in terminal, it can be the same as telescope.lua -->
@@ -24,3 +24,4 @@
 - [ ] dockerfile syntax
 - [x] disable virtual text using whichkey lsp line
 - [ ] better DAP: https://github.com/LunarVim/starter.lvim/blob/c-ide/config.lua 
+- [ ] BUG: skhd status

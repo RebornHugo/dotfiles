@@ -157,11 +157,10 @@ local mappings = {
     name = "Options",
     c = { '<cmd>lua vim.g.cmp_active=false<cr>', "Completion off" },
     C = { '<cmd>lua vim.g.cmp_active=true<cr>', "Completion on" },
---  TODO(Hugo): add custom function
---  TODO(Hugo): add function show invisible char. listchars=tab:›\ ,eol:¬,trail:⋅
     w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
     r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
     l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
+    L = { '<cmd>lua require("user.functions").toggle_option("list")<cr>', "List" },
     s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
     t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
 

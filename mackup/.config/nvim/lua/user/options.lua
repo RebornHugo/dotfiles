@@ -42,5 +42,6 @@ vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
--- vim.opt.wrap = true
--- vim.opt.list = true
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
