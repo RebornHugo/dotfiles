@@ -1,4 +1,3 @@
-vim.notify "trigger ftplugin"
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
   return
@@ -14,8 +13,9 @@ local opts = {
 }
 
 local mappings = {
-  C = {
+  y = {
     name = "Python",
+    y = { ":silent only | Jaq<cr>", "Run Code" },
     t = { "<cmd>lua require('dap-python').test_method()<cr>", "Test Method" },
     T = { "<cmd>lua require('dap-python').test_class()<cr>", "Test Class" },
     d = { "<cmd>lua require('dap-python').debug_selection()<cr>", "Debug Selection" },

@@ -360,11 +360,11 @@ local mappings = {
 --   --   n = { "<cmd>TZNarrow<cr>", "Narrow" },
 --   --   f = { "<cmd>TZFocus<cr>", "Focus" },
 --   -- },
-  y = {
-    name = "MISC",
-    r = { ":silent only | Jaq<cr>", "Run Code" },
-    m = { ":MarkdownPreviewToggle<cr>", "Markdown" },
-  }
+  -- y = {
+  --   name = "MISC",
+  --   r = { ":silent only | Jaq<cr>", "Run Code" },
+  --   m = { ":MarkdownPreviewToggle<cr>", "Markdown" },
+  -- }
 }
 
 local vopts = {

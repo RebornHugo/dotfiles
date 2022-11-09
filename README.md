@@ -25,3 +25,4 @@
 - [x] disable virtual text using whichkey lsp line
 - [ ] better DAP: https://github.com/LunarVim/starter.lvim/blob/c-ide/config.lua 
 - [ ] BUG: skhd status
+- [ ] what's {same_name}-E file
