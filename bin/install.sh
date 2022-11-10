@@ -14,6 +14,8 @@ if [ "$(uname)" = "Darwin" ]; then
   brew services start skhd
   brew install yabai
   brew services start yabai
+  brew install tldr
+  tldr --update
 elif [ "$(uname)" = "Linux" ]; then
   echo "linux doesn't install anything.."
   # brew install xxx
@@ -39,8 +41,6 @@ brew install tmux
 # brew install wakatime-cli
 brew install zoxide
 brew install gnu-sed # used for spectre
-brew install tldr
-tldr --update
 
 # wget https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_macOS_amd64.tar.gz
 # unzip and move to /usr/local/bin/gitmux
@@ -60,9 +60,14 @@ ln -s "$MYDIR/dotfiles/mackup/.mackup" ~/.mackup
 mackup restore
 
 # fisher https://github.com/jorgebucaran/fisher
-curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don
-chsh -s "$(which fish)"
+# curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+# fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don
+# chsh -s "$(which fish)"
+
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/HEAD/functions/fisher.fish | source &&
+  fisher install jorgebucaran/fisher &&
+  fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don &&
+  chsh -s "$(which fish)" "
 # cp "$HOME/.fzf/shell/key-bindings.fish" "$MYDIR/dotfiles/mackup/.config/fish/functions/fzf_key_bindings.fish"
 # TODO: git remove mackup/.config/fish/functions/fzf_key_bindings.fish
 
