@@ -4,6 +4,9 @@ MYDIR="$HOME/Workspace/Coding"
 cd ~ && mkdir -p "$MYDIR" && cd "$MYDIR" || exit
 git clone https://github.com/RebornHugo/dotfiles.git dotfiles
 
+brew update --auto-update
+export HOMEBREW_NO_AUTO_UPDATE=1
+
 if [ "$(uname)" = "Darwin" ]; then
   brew install bash
   brew install cmake
@@ -14,10 +17,9 @@ if [ "$(uname)" = "Darwin" ]; then
   brew services start skhd
   brew install yabai
   brew services start yabai
-  brew install tldr
-  tldr --update
 elif [ "$(uname)" = "Linux" ]; then
-  echo "linux doesn't install anything.."
+  echo "linux need remove deprecated apt pkgs"
+  apt remove tmux
   # brew install xxx
 fi
 
@@ -50,14 +52,18 @@ brew install gnu-sed # used for spectre
 # brew tap federico-terzi/espanso
 # brew install espanso
 
-
-
-
 # mackup
 ln -s "$MYDIR/dotfiles/mackup/.mackup.cfg" ~/.mackup.cfg
 ln -s "$MYDIR/dotfiles/mackup/.mackup" ~/.mackup
 # ln -s /Users/hugoreborn/Workspace/Coding/dotfiles/mackup/.mackup.cfg /Users/hugoreborn/.mackup.cfg
-mackup restore
+
+
+# TODO: check user name instead of system name
+if [ "$(uname)" = "Darwin" ]; then
+  mackup restore
+elif [ "$(uname)" = "Linux" ]; then
+  mackup restore -r
+fi
 
 # fisher https://github.com/jorgebucaran/fisher
 # curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
