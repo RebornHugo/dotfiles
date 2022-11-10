@@ -64,10 +64,10 @@ mackup restore
 # fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don
 # chsh -s "$(which fish)"
 
-fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/HEAD/functions/fisher.fish | source &&
-  fisher install jorgebucaran/fisher &&
-  fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don &&
-  chsh -s "$(which fish)" "
+fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/HEAD/functions/fisher.fish | source && \
+  fisher install jorgebucaran/fisher && \
+  fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don && \
+  chsh -s $(which fish) "
 # cp "$HOME/.fzf/shell/key-bindings.fish" "$MYDIR/dotfiles/mackup/.config/fish/functions/fzf_key_bindings.fish"
 # TODO: git remove mackup/.config/fish/functions/fzf_key_bindings.fish
 
@@ -116,4 +116,4 @@ RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 # apt install python3.8-venv
 
 # dap
-pip3 install debugy
+pip3 install debugpy
