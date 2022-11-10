@@ -26,3 +26,5 @@
 - [ ] better DAP: https://github.com/LunarVim/starter.lvim/blob/c-ide/config.lua 
 - [ ] BUG: skhd status
 - [ ] what's {same_name}-E file
+- [x] virutal env install dap debugpy
+- [ ] mason install DAP, linter, formatter automatically

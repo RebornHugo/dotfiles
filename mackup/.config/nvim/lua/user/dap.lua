@@ -17,6 +17,16 @@ dap_install.setup({})
 
 dap_install.config("python", {})
 -- add other configs here
+-- TODO: setting dap
+-- require('dap-python').setup("/usr/local/bin/python3")
+
+-- Setup dap for python
+local mason_path = vim.fn.glob(vim.fn.stdpath "data" .. "/mason/")
+pcall(function()
+  -- mason installed debugpy is in a brand python venv, which doesn't have dependency we need, e.g. numpy
+  -- require("dap-python").setup(mason_path .. "packages/debugpy/venv/bin/python")
+  require("dap-python").setup("python")
+end)
 
 dapui.setup({
 	expand_lines = true,
@@ -30,26 +40,26 @@ dapui.setup({
 		repl = "r",
 		toggle = "t",
 	},
-	layouts = {
-		{
-			elements = {
-				{ id = "scopes", size = 0.33 },
-				{ id = "breakpoints", size = 0.17 },
-				{ id = "stacks", size = 0.25 },
-				{ id = "watches", size = 0.25 },
-			},
-			size = 0.33,
-			position = "right",
-		},
-		{
-			elements = {
-				{ id = "repl", size = 0.45 },
-				{ id = "console", size = 0.55 },
-			},
-			size = 0.27,
-			position = "bottom",
-		},
-	},
+	-- layouts = {
+	-- 	{
+	-- 		elements = {
+	-- 			{ id = "scopes", size = 0.33 },
+	-- 			{ id = "breakpoints", size = 0.17 },
+	-- 			{ id = "stacks", size = 0.25 },
+	-- 			{ id = "watches", size = 0.25 },
+	-- 		},
+	-- 		size = 0.33,
+	-- 		position = "right",
+	-- 	},
+	-- 	{
+	-- 		elements = {
+	-- 			{ id = "repl", size = 0.45 },
+	-- 			{ id = "console", size = 0.55 },
+	-- 		},
+	-- 		size = 0.27,
+	-- 		position = "bottom",
+	-- 	},
+	-- },
 	floating = {
 		max_height = 0.9,
 		max_width = 0.5, -- Floats will be treated as percentage of your screen.
