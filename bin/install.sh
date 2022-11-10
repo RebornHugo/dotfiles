@@ -1,16 +1,28 @@
 #!/bin/bash
 
-cd ~ && mkdir -p Workspace/Coding && cd Workspace/Coding 
+MYDIR="$HOME/Workspace/Coding"
+cd ~ && mkdir -p "$MYDIR" && cd "$MYDIR" || exit
 git clone https://github.com/RebornHugo/dotfiles.git dotfiles
 
-brew install bash
+if [ "$(uname)" = "Darwin" ]; then
+  brew install bash
+  brew install cmake
+  brew install git
+  brew install fzf
+  brew install trash-cli
+  brew install skhd
+  brew services start skhd
+  brew install yabai
+  brew services start yabai
+elif [ "$(uname)" = "Linux" ]; then
+  echo "linux doesn't install anything.."
+  # brew install xxx
+fi
+
 brew install bat
 # brew install fd
 brew install fish
-brew install fzf
 # brew install gh
-brew install cmake
-brew install git
 # brew install git-delta
 brew install lazydocker
 brew install lazygit
@@ -19,6 +31,7 @@ brew install lsd
 brew install mackup
 brew install neofetch
 brew install neovim
+brew install npm
 brew install ripgrep
 brew install starship
 brew install tealdeer
@@ -26,6 +39,8 @@ brew install tmux
 # brew install wakatime-cli
 brew install zoxide
 brew install gnu-sed # used for spectre
+brew install tldr
+tldr --update
 
 # wget https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_macOS_amd64.tar.gz
 # unzip and move to /usr/local/bin/gitmux
@@ -36,24 +51,20 @@ brew install gnu-sed # used for spectre
 # brew install espanso
 
 
-if [[ $PLATFORM == 'macos' ]]; then
-   brew install trash-cli
-   brew install skhd
-   brew services start skhd
-   brew install yabai
-   brew services start yabai
-fi
 
 
 # mackup
-ln -s ~/Workspace/Coding/dotfiles/mackup/.mackup.cfg ~/.mackup.cfg
-ln -s ~/Workspace/Coding/dotfiles/mackup/.mackup ~/.mackup
+ln -s "$MYDIR/dotfiles/mackup/.mackup.cfg" ~/.mackup.cfg
+ln -s "$MYDIR/dotfiles/mackup/.mackup" ~/.mackup
 # ln -s /Users/hugoreborn/Workspace/Coding/dotfiles/mackup/.mackup.cfg /Users/hugoreborn/.mackup.cfg
 mackup restore
 
 # fisher https://github.com/jorgebucaran/fisher
 curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don
+chsh -s "$(which fish)"
+# cp "$HOME/.fzf/shell/key-bindings.fish" "$MYDIR/dotfiles/mackup/.config/fish/functions/fzf_key_bindings.fish"
+# TODO: git remove mackup/.config/fish/functions/fzf_key_bindings.fish
 
 # nvm https://github.com/nvm-sh/nvm
 # mkdir ~/.nvm
@@ -70,7 +81,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ~/.tmux/plugins/tpm/bin/install_plugins
 
 # casks
-if [[ $PLATFORM == 'macos' ]]; then
+if [ "$(uname)" = "Darwin" ]; then
    # brew install --cask 1password
    brew install --cask alacritty
    brew install --cask alfred           
@@ -83,13 +94,21 @@ if [[ $PLATFORM == 'macos' ]]; then
    # brew install --cask spacelauncher    
    brew install --cask spotify
    brew install --cask sioyek
+elif [ "$(uname)" = "Linux" ]; then
+  # in case homebrew overwrite system python3 and pip3
+  # NOTE: maybe just set: ENV PATH "$PATH:/home/linuxbrew/.linuxbrew/bin"  ??? even in mac os
+  # ln -s /usr/bin/python3 /home/linuxbrew/.linuxbrew/bin/python3
+  echo "linux doesn't need to install cask"
 fi
 
 # lsp
 # pip3 install black
 # pip3 install flake8
 # brew install shellcheck
-# npx @johnnymorganz/stylua-bin --help  # lua format still not work..
+# npx @johnnymorganz/stylua-bin --help  # lua format still not work
+# npm is not excutable
+RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+# apt install python3.8-venv
 
 # dap
 pip3 install debugy
