@@ -205,6 +205,10 @@ local mappings = {
     l = { "<cmd>lua require'dap'.run_last()<cr>", "Last" },
     u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI" },
     v = { "<cmd>DapVirtualTextToggle<cr>", "VirtualText" },
+    w = { "<cmd>lua require'dap.ui.widgets'.hover()<cr>", "Widget" },  -- TODO: check dapui float_element
+    -- w = { "<cmd>lua local widgets = require 'dap.ui.widgets'; widgets.centered_float(widgets.scopes)<cr>", "Widget" },
+    j = { "<cmd>lua require'dap'.down()<cr>", "down" },
+    k = { "<cmd>lua require'dap'.up()<cr>", "up" },
     x = { "<cmd>lua require'dap'.terminate()<cr>", "Exit" },
   },
 -- 
