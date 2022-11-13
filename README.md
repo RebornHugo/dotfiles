@@ -21,7 +21,6 @@
 - [ ] wait for official spectre with current file option
 - [ ] clipboard feature: save current clipboard content.
 - [ ] neoscrollbar
-- [ ] dockerfile syntax
 - [x] disable virtual text using whichkey lsp line
 - [ ] better DAP: https://github.com/LunarVim/starter.lvim/blob/c-ide/config.lua 
 - [ ] BUG: skhd status

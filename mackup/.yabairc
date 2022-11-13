@@ -51,5 +51,6 @@ yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^FortiClient$" manage=off
 yabai -m rule --add app="^Telegram Lite$" manage=off
 yabai -m rule --add app="^WeChat$" manage=off
+yabai -m rule --add app="^Alfred Preferences$" manage=off
 
 echo "yabai configuration loaded.."
