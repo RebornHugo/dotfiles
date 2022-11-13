@@ -4,7 +4,7 @@ MYDIR="$HOME/Workspace/Coding"
 cd ~ && mkdir -p "$MYDIR" && cd "$MYDIR" || exit
 git clone https://github.com/RebornHugo/dotfiles.git dotfiles
 
-brew update --auto-update
+brew update
 export HOMEBREW_NO_AUTO_UPDATE=1
 
 if [ "$(uname)" = "Darwin" ]; then
