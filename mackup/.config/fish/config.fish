@@ -49,3 +49,6 @@ abbr lg "lazygit"
 # lsd is a modern ls alternative with highlight. (similar to exa)
 abbr ll "lsd  --group-dirs first -Al"
 abbr lt "lsd  --group-dirs last -A --tree"
+
+# entertainment only
+abbr streamingtest "bash (curl -L -s check.unlock.media | psub)"
