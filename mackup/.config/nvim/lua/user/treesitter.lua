@@ -1,36 +1,3 @@
--- local status_ok, treesitter = pcall(require, "nvim-treesitter")
--- if not status_ok then
--- 	return
--- end
-
--- local status_ok, configs = pcall(require, "nvim-treesitter.configs")
--- if not status_ok then
--- 	return
--- end
-
--- configs.setup({
---   ensure_installed = { "lua", "markdown", "markdown_inline", "bash", "python" }, -- put the language you want in this array
---   -- ensure_installed = "all", -- one of "all" or a list of languages
--- 	ignore_install = { "" }, -- List of parsers to ignore installing
--- 	sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
---   
---   highlight = {
--- 		enable = true, -- false will disable the whole extension
--- 		disable = { "css", "markdown" }, -- list of language that will be disabled
--- 	},
--- 	autopairs = {
--- 		enable = true,
--- 	},
--- 	indent = { enable = true, disable = { "python", "css" } },
-
--- 	context_commentstring = {
--- 		enable = true,
--- 		enable_autocmd = false,
--- 	},
-
--- })
-
-
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
   return
@@ -40,7 +7,46 @@ end
 -- ft_to_parser.motoko = "typescript"
 
 configs.setup {
-  ensure_installed = "all", -- one of "all" or a list of languages
+  -- ensure_installed = "all", -- one of "all" or a list of languages
+ ensured_installed = {
+		"bash",
+		"comment",
+		"css",
+		"html",
+		"javascript",
+		"jsdoc",
+		"json",
+		"json5",
+		"julia",
+		"latex",
+		"bibtex",
+		"jsonc",
+		"lua",
+		"make",
+		"markdown",
+		"markdown_inline",
+		"regex",
+		"scss",
+		"toml",
+		"typescript",
+		"yaml",
+		"dockerfile",
+		"python",
+		"proto",
+		"java",
+		"beancount",
+		"cuda",
+		"diff",
+		"fish",
+		"c",
+		"cpp",
+		"gitignore",
+		"go",
+		"ruby",
+		"rust",
+		"sql",
+		"vim",
+	},
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
   matchup = {
