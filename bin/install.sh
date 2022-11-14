@@ -4,14 +4,11 @@ MYDIR="$HOME/Workspace/Coding"
 cd ~ && mkdir -p "$MYDIR" && cd "$MYDIR" || exit
 git clone https://github.com/RebornHugo/dotfiles.git dotfiles
 
-brew update
-export HOMEBREW_NO_AUTO_UPDATE=1
-
 if [ "$(uname)" = "Darwin" ]; then
   brew install bash
   brew install cmake
+  brew install tmux
   brew install git
-  brew install fzf
   brew install trash-cli
   brew install skhd
   brew services start skhd
@@ -19,7 +16,13 @@ if [ "$(uname)" = "Darwin" ]; then
   brew services start yabai
 elif [ "$(uname)" = "Linux" ]; then
   echo "linux need remove deprecated apt pkgs"
-  apt remove tmux
+  apt remove -y tmux
+  apt install -y libncurses5-dev libncursesw5-dev
+  wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
+  tar -zxf tmux-*.tar.gz
+  cd tmux-*/ ||
+  ./configure
+  make && sudo make install
   # brew install xxx
 fi
 
@@ -28,6 +31,7 @@ brew install bat
 brew install fish
 # brew install gh
 # brew install git-delta
+brew install fzf
 brew install lazydocker
 brew install lazygit
 brew install lf
@@ -39,7 +43,6 @@ brew install npm
 brew install ripgrep
 brew install starship
 brew install tealdeer
-brew install tmux
 # brew install wakatime-cli
 brew install zoxide
 brew install gnu-sed # used for spectre
@@ -118,7 +121,7 @@ fi
 # brew install shellcheck
 # npx @johnnymorganz/stylua-bin --help  # lua format still not work
 # npm is not excutable
-RUN nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 # apt install python3.8-venv
 
 # dap

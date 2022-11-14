@@ -2,6 +2,11 @@
 vim.o.termguicolors = true
 local colorscheme = "catppuccin"  -- darkplus onedarker nightfox nordfox terafox catppuccin
 
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
+  return
+end
+
 -- Palettes are the base color defines of a colorscheme.
 -- You can override these palettes for each colorscheme defined by nightfox.
 local palettes = {
@@ -139,9 +144,4 @@ if colorscheme == 'catppuccin' then
       end,
     },
   })
-end
-
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
-if not status_ok then
-  return
 end
