@@ -17,12 +17,15 @@ if [ "$(uname)" = "Darwin" ]; then
 elif [ "$(uname)" = "Linux" ]; then
   echo "linux need remove deprecated apt pkgs"
   apt remove -y tmux
+  apt update -y
   apt install -y libncurses5-dev libncursesw5-dev
   wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
   tar -zxf tmux-*.tar.gz
-  cd tmux-*/ ||
+  cd tmux-*/ || exit
   ./configure
   make && sudo make install
+  cd "$MYDIR" || exit
+  /bin/rm tmux-3.3a.tar.gz
   # brew install xxx
 fi
 
