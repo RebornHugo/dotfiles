@@ -14,8 +14,10 @@ if [ "$(uname)" = "Darwin" ]; then
   brew services start skhd
   brew install yabai
   brew services start yabai
+  brew install fish
 elif [ "$(uname)" = "Linux" ]; then
-  echo "linux need remove deprecated apt pkgs"
+
+  echo "building tmux for ubuntu"
   apt remove -y tmux
   apt update -y
   apt install -y libncurses5-dev libncursesw5-dev
@@ -26,12 +28,13 @@ elif [ "$(uname)" = "Linux" ]; then
   make && sudo make install
   cd "$MYDIR" || exit
   /bin/rm tmux-3.3a.tar.gz
-  # brew install xxx
+
+  echo "installing fish for ubuntu"
+  apt-add-repository ppa:fish-shell/release-3 &&apt-get autoclean &&  apt-get update && apt-get install -y fish
 fi
 
 brew install bat
 # brew install fd
-brew install fish
 # brew install gh
 # brew install git-delta
 brew install fzf
@@ -124,7 +127,6 @@ fi
 # npx @johnnymorganz/stylua-bin --help  # lua format still not work
 # npm is not excutable
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-# apt install python3.8-venv
 
 # dap
 pip3 install debugpy

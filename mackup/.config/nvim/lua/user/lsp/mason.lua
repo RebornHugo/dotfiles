@@ -10,6 +10,7 @@ local servers = {
 	"yamlls",
 	"clangd",
 	"cmake",
+  "docker-langserver",
 	-- "grammarly"  -- need token
 }
 local linters = {
