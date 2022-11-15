@@ -8,7 +8,7 @@ end
 
 configs.setup {
   -- ensure_installed = "all", -- one of "all" or a list of languages
- ensured_installed = {
+ ensure_installed = {
 		"bash",
 		"comment",
 		"css",
@@ -36,7 +36,6 @@ configs.setup {
 		"java",
 		"beancount",
 		"cuda",
-		"diff",
 		"fish",
 		"c",
 		"cpp",
