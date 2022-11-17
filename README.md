@@ -8,7 +8,7 @@
 - [x] use hot-reload
 - [x] ctrl-^,1,2,3... not work in nvim with alacritty
 - [ ] latex with grammarly integration
-- [ ] BUG: navic highlight not works
+- [x] BUG: navic highlight not works
 - [x] lsp-inlayhints integration
 - [x] update to NeoVim 0.8, using mason instead of lsp-installer
 - [x] lualine show lsp-signature
