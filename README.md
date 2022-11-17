@@ -12,7 +12,6 @@
 - [x] lsp-inlayhints integration
 - [x] update to NeoVim 0.8, using mason instead of lsp-installer
 - [x] lualine show lsp-signature
-- [ ] check symbols
 - [x] get project tree, ref: https://github.com/ray-x/nvim
 - [ ] Cursor could be clearer
 - [x] harpoon and marks UI
