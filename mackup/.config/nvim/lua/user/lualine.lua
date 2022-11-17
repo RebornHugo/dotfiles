@@ -36,8 +36,7 @@ local diagnostics = {
 	sources = { "nvim_diagnostic", "coc" },
 
 	-- Displays diagnostics for the defined severity types
-	-- sections = { "error", "warn", "info", "hint" },
-	sections = { "error", "warn" },
+	sections = { "error", "warn", "info", "hint" },
 
 	diagnostics_color = {
 		-- Same values as the general color option can be used here.
@@ -46,10 +45,12 @@ local diagnostics = {
 		info = "DiagnosticInfo", -- Changes diagnostics' info color.
 		hint = "DiagnosticHint", -- Changes diagnostics' hint color.
 	},
-  symbols = {
-    error = icons.diagnostics.Error .. "%*" .. " ",
-    warn = icons.diagnostics.Warning .. "%*" .. " ",
-  },
+	symbols = {
+		error = icons.diagnostics.Error .. " ",
+		warn = icons.diagnostics.Warning .. " ",
+		info = icons.diagnostics.Information .. " ",
+		hint = icons.diagnostics.Hint .. " ",
+	},
 	colored = true, -- Displays diagnostics status in color if set to true.
 	update_in_insert = false, -- Update diagnostics in insert mode.
 	always_visible = false, -- Show diagnostics even if there are none.
