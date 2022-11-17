@@ -165,7 +165,7 @@ dapui.setup({
 })
 
 -- TODO: check launch.json
-require("dap.ext.vscode").load_launchjs(vim.fn.getcwd() .. "/.vscode/launch.json", vim.fn.getcwd() .. "/launch.json", {
+require("dap.ext.vscode").load_launchjs(vim.fn.getcwd() .. "/.vscode/launch.json", {
 	python_launch = { "python" },
 	python_attach = { "python" },
 })
