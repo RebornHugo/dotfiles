@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 local icons = require "user.icons"
-options = {
+local options = {
   icons = {
     File = ' ',
     Module = ' ',
