@@ -9,7 +9,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "unmap J\nunmap K\nunmap H\nunmap L\nmap H previousTab\nmap L nextTab\nmap <c-d> scrollPageDown\nmap <c-i> goForward\nmap <c-o> goBack\nmap J goForward\nmap K goBack\nmap <c-p> togglePinTab\nmap <c-u> scrollPageUp\nmap d$ closeTabsOnRight\nmap d^ closeTabsOnLeft\nmap",
+  "keyMappings": "unmap J\nunmap K\nunmap H\nunmap L\nmap H previousTab\nmap L nextTab\nmap <c-d> scrollPageDown\nmap <c-i> goForward\nmap <c-o> goBack\nmap J goForward\nmap K goBack\nmap <c-p> togglePinTab\nmap <c-u> scrollPageUp\nmap D$ closeTabsOnRight\nmap D^ closeTabsOnLeft\nunmap ^\nmap <c-6> visitPreviousTab",
   "linkHintCharacters": "sadfjklewcmpgh",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "https://www.google.com/",
