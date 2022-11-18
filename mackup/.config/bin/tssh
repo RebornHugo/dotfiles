@@ -1,0 +1,24 @@
+#!/bin/sh
+
+CURRENT_NAME=$(tmux display-message -p '#W')
+
+# parse command into ALL
+ALL=$@
+
+echo "running ssh" $ALL
+
+# parse ip address
+USER_IP=$(echo $ALL | rev | cut -d " " -f1 | rev)
+# echo "USER_IP" $USER_IP
+
+IP=$(echo $USER_IP | rev | cut -d "@" -f1 | rev)
+
+# rename tmux windows
+tmux rename-window $IP
+
+# ssh connection
+ssh $ALL
+
+# disconnect and rename back
+echo "rename tmux windows name back"
+tmux rename-window $CURRENT_NAME

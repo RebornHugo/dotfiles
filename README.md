@@ -4,7 +4,6 @@
 
 ## vim
 
-- [ ] Should Alpha show hidden files?
 - [x] use hot-reload
 - [x] ctrl-^,1,2,3... not work in nvim with alacritty
 - [ ] latex with grammarly integration
@@ -33,7 +32,7 @@
 
 ## TMUX
 
-- [ ] auto rename windows by host name
+- [x] auto rename windows by host name
 
 ## MISC
 

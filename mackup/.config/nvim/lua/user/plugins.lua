@@ -65,7 +65,7 @@ return packer.startup(function(use)
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
   use { "LunarVim/onedarker.nvim" }
-  use  {"EdenEast/nightfox.nvim" }
+  use { "EdenEast/nightfox.nvim" }
   use {
     "catppuccin/nvim",
     as = "catppuccin",
