@@ -41,6 +41,7 @@ end
 
 local python = Terminal:new { cmd = "ipython", hidden = true }
 
+-- term created by lua function can't be closed by <c-\>
 function _PYTHON_TOGGLE()
   python:toggle()
 end
