@@ -26,6 +26,7 @@ dashboard.section.buttons.val = {
   button("e", " " .. " New file", ":ene <BAR> startinsert <CR>"),
   button("p", " " .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
   button("g", " " .. " Git Files", ":Telescope git_files <CR>"),
+  button("o", " " .. " Changed Files", ":Telescope git_status <CR>"),
   button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
   button("t", " " .. " Find text", ":Telescope live_grep <CR>"),
   -- button("s", icons.ui.SignIn .. "  Find Session", ":SearchSession<CR>"),
