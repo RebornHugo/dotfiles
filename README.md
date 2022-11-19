@@ -12,7 +12,6 @@
 - [x] update to NeoVim 0.8, using mason instead of lsp-installer
 - [x] lualine show lsp-signature
 - [x] get project tree, ref: https://github.com/ray-x/nvim
-- [ ] Cursor could be clearer
 - [x] harpoon and marks UI
 - [x] show space and new line symbols(wrap in whichkey)
 - [ ] wait for official spectre with current file option
@@ -24,6 +23,8 @@
 - [ ] mason install DAP, linter, formatter automatically
 - [ ] check dapui float_element, save breakpoint after reopen nvim
 - [ ] better DAP with LSP: https://github.com/LunarVim/starter.lvim/blob/c-ide/config.lua
+- [ ] toggle key of lsp-signature and reset cmp
+- [ ] show underscores, refer to tokyonight
 
 ## windows manager
 
