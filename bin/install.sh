@@ -81,7 +81,11 @@ fi
 
 fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/HEAD/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
 fish -c "fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don"
-chsh -s "$(which fish)"
+# chsh -s "$(which fish)"
+
+# install zap
+sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
+zap --update
 
 # cp "$HOME/.fzf/shell/key-bindings.fish" "$MYDIR/dotfiles/mackup/.config/fish/functions/fzf_key_bindings.fish"
 
