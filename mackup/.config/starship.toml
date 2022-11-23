@@ -10,6 +10,9 @@ style = "blue bold"
 [package]
 disabled = true
 
+# https://starship.rs/config/#ruby
+[ruby]
+disabled = true
 # [username]
 # disabled = true
 
