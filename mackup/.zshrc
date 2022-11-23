@@ -10,11 +10,18 @@ plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/functions.zsh"
 
-# case insensitive path-completion (better to add in supercharge)
+# autosuggest and completion setting
+## case insensitive path-completion (better to add in supercharge)
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
-# tab matching color
-zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==34=34}:${(s.:.)LS_COLORS}")';
 
+## color setting
+_ls_colors="di=1;36:ln=35:so=32:pi=33:ex=31:bd=34;46:cd=34;43:su=30;41:sg=30;46:tw=30;42:ow=30;43"
+## tab suggestion uses ls color, ref: https://github.com/ohmyzsh/ohmyzsh/issues/6060#issuecomment-572863893
+zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
+## tab matching prefix uses specific color: ref: https://stackoverflow.com/a/16149200
+zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==34=34}:${(s.:.)_ls_colors}")';
+
+# export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#808080'
 # plugins
 plug "zsh-users/zsh-autosuggestions"
 plug "hlissner/zsh-autopair"

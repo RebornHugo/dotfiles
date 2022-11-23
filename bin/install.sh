@@ -38,6 +38,7 @@ brew install bat
 # brew install gh
 # brew install git-delta
 brew install fzf
+"$(brew --prefix)"/opt/fzf/install --all
 brew install lazydocker
 brew install lazygit
 brew install lf
