@@ -11,7 +11,8 @@ plug "$HOME/.config/zsh/functions.zsh"
 
 # case insensitive path-completion (better to add in supercharge)
 zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 
-# TODO: set autosuggest color
+# tab matching color
+zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==34=34}:${(s.:.)LS_COLORS}")';
 
 # plugins
 plug "zsh-users/zsh-autosuggestions"
