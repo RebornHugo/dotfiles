@@ -19,10 +19,14 @@ null_ls.setup {
     },
     formatting.black.with { extra_args = { "--fast" } },
     formatting.stylua,
-    formatting.shfmt,
+    formatting.shfmt.with({
+    filetypes = { 'sh', 'zsh', 'bash' },
+    args = { '-i', '2' },
+    }),
     formatting.google_java_format,
     diagnostics.flake8,
     diagnostics.shellcheck,
+    diagnostics.zsh
 -- TODO: formatting and diagnostics for cpp
   },
 }

@@ -16,13 +16,12 @@ export PATH=$PATH:/usr/local/opt/llvm/bin/
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="$HOME/.gem/ruby/3.0.0/bin:$PATH"
 
-export BAT_THEME=Nord 
-
+export BAT_THEME=Nord
 
 # LF icons
 [ -f ~/.config/zsh/LF_ICONS ] && {
-	LF_ICONS="$(tr '\n' ':' <~/.config/zsh/LF_ICONS)" \
-		&& export LF_ICONS
+  LF_ICONS="$(tr '\n' ':' <~/.config/zsh/LF_ICONS)" &&
+    export LF_ICONS
 }
 
 # locale
