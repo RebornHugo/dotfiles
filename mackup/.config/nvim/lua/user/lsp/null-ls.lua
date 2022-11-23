@@ -21,7 +21,7 @@ null_ls.setup {
     formatting.stylua,
     formatting.shfmt.with({
     filetypes = { 'sh', 'zsh', 'bash' },
-    args = { '-i', '2' },
+    args = { '-i', '4' },
     }),
     formatting.google_java_format,
     diagnostics.flake8,

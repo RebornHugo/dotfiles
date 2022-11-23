@@ -24,7 +24,8 @@
 - [ ] check dapui float_element, save breakpoint after reopen nvim
 - [ ] better DAP with LSP: https://github.com/LunarVim/starter.lvim/blob/c-ide/config.lua
 - [ ] toggle key of lsp-signature and reset cmp
-- [ ] show underscores, refer to tokyonight
+- [x] show underscores, refer to tokyonight
+- [x] zsh lsp: shellcheck, shfmt
 
 ## windows manager
 
