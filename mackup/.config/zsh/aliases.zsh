@@ -6,7 +6,7 @@ alias nvimdot='nvim ~/Workspace/Coding/dotfiles'
 alias nv="TERM=alacritty nvim"
 alias nvim="TERM=alacritty nvim"
 # abbr :q "tmux kill-server"  # not work..
-alias tn="tmux new -s $(pwd | sed 's/.*\///g')"
+alias tn="tmux new -s \$(pwd | sed 's/.*\///g')"
 alias sio="/Applications/sioyek.app/Contents/MacOS/sioyek"
 alias l="lsd  --group-dirs first -A"
 # abbr ld "lazydocker"
