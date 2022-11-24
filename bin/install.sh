@@ -69,15 +69,15 @@ ln -s "$MYDIR/dotfiles/mackup/.mackup.cfg" ~/.mackup.cfg
 ln -s "$MYDIR/dotfiles/mackup/.mackup" ~/.mackup
 # ln -s /Users/hugoreborn/Workspace/Coding/dotfiles/mackup/.mackup.cfg /Users/hugoreborn/.mackup.cfg
 
-# place fzf keybinding after mackup to avoid warning
-"$(brew --prefix)"/opt/fzf/install --all
-
 # TODO: check user name instead of system name
 if [ "$(uname)" = "Darwin" ]; then
   mackup restore
 elif [ "$(uname)" = "Linux" ]; then
   mackup restore -r
 fi
+
+# place fzf keybinding after mackup to avoid warning
+"$(brew --prefix)"/opt/fzf/install --all
 
 # fisher https://github.com/jorgebucaran/fisher
 # curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
@@ -135,6 +135,8 @@ fi
 # brew install shellcheck
 # npx @johnnymorganz/stylua-bin --help  # lua format still not work
 # npm is not excutable
+
+# PackerSync silently
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 
 # dap
