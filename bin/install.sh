@@ -44,7 +44,6 @@ brew install bat
 # brew install gh
 # brew install git-delta
 brew install fzf
-"$(brew --prefix)"/opt/fzf/install --all
 brew install lsd
 brew install mackup
 brew install neofetch
@@ -69,6 +68,9 @@ brew install gnu-sed # used for spectre
 ln -s "$MYDIR/dotfiles/mackup/.mackup.cfg" ~/.mackup.cfg
 ln -s "$MYDIR/dotfiles/mackup/.mackup" ~/.mackup
 # ln -s /Users/hugoreborn/Workspace/Coding/dotfiles/mackup/.mackup.cfg /Users/hugoreborn/.mackup.cfg
+
+# place fzf keybinding after mackup to avoid warning
+"$(brew --prefix)"/opt/fzf/install --all
 
 # TODO: check user name instead of system name
 if [ "$(uname)" = "Darwin" ]; then
