@@ -9,6 +9,9 @@ local setup = {
 		right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
 		offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
 		separator_style = "thin", -- | "thick" | "thin" | { 'any', 'any' },
+    diagnostics = false,  -- "nvim_lsp" ,
+    diagnostics_update_in_insert = false,
+    modified_icon = '●',
 	},
 }
 
@@ -122,5 +125,5 @@ else
 	}
 end
 
-setup = vim.tbl_extend("keep", { highlights = highlights }, setup)
+-- setup = vim.tbl_extend("keep", { highlights = highlights }, setup)
 bufferline.setup(setup)
