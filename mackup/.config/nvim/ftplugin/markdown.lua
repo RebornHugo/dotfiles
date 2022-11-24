@@ -17,7 +17,7 @@ local mappings = {
   -- TODO: merge all jaq into whickey leader-d, and set markdown preview to the same keybinding using ftplugin
   y = {
         name = "Markdown",
-    r = { ":silent only | Jaq<cr>", "Run Code" },
+    y = { "<cmd>MarkdownPreviewToggle<cr>", "MarkdownPreviewToggle" },
   },
 }
 which_key.register(mappings, opts)

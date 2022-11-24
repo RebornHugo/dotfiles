@@ -1,4 +1,4 @@
-# Hugo's dotfilesreard
+# Hugo's dotfiles
 
 # TODO
 
