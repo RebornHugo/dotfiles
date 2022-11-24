@@ -14,23 +14,29 @@ if [ "$(uname)" = "Darwin" ]; then
   brew services start skhd
   brew install yabai
   brew services start yabai
-  brew install fish
+  brew install lazydocker
+  brew install lazygit
+  brew install lf
+  # brew install fish
 elif [ "$(uname)" = "Linux" ]; then
 
   echo "building tmux for ubuntu"
-  apt remove -y tmux
-  apt update -y
-  apt install -y libncurses5-dev libncursesw5-dev
-  wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz
-  tar -zxf tmux-*.tar.gz
+  apt remove -y tmux && apt update -y && apt install -y libncurses5-dev libncursesw5-dev
+  wget https://github.com/tmux/tmux/releases/download/3.3a/tmux-3.3a.tar.gz && tar -zxf tmux-*.tar.gz
   cd tmux-*/ || exit
   ./configure
   make && sudo make install
   cd "$MYDIR" || exit
   /bin/rm tmux-3.3a.tar.gz
 
-  echo "installing fish for ubuntu"
-  apt-add-repository ppa:fish-shell/release-3 &&apt-get autoclean &&  apt-get update && apt-get install -y fish
+  echo "installing fish, lf, lazygit for ubuntu"
+  # apt-add-repository ppa:fish-shell/release-3 &&apt-get autoclean &&  apt-get update && apt-get install -y fish
+
+  # golang pkg installed by homebrew has bug in ubuntu
+  # install lf manager
+  curl -L https://github.com/gokcehan/lf/releases/latest/download/lf-linux-amd64.tar.gz | tar xzC /usr/local/bin
+  # install lazygit
+  add-apt-repository ppa:lazygit-team/release && apt update && apt install -y lazygit
 fi
 
 brew install bat
@@ -39,9 +45,6 @@ brew install bat
 # brew install git-delta
 brew install fzf
 "$(brew --prefix)"/opt/fzf/install --all
-brew install lazydocker
-brew install lazygit
-brew install lf
 brew install lsd
 brew install mackup
 brew install neofetch
@@ -67,7 +70,6 @@ ln -s "$MYDIR/dotfiles/mackup/.mackup.cfg" ~/.mackup.cfg
 ln -s "$MYDIR/dotfiles/mackup/.mackup" ~/.mackup
 # ln -s /Users/hugoreborn/Workspace/Coding/dotfiles/mackup/.mackup.cfg /Users/hugoreborn/.mackup.cfg
 
-
 # TODO: check user name instead of system name
 if [ "$(uname)" = "Darwin" ]; then
   mackup restore
@@ -80,13 +82,13 @@ fi
 # fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don
 # chsh -s "$(which fish)"
 
-fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/HEAD/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
-fish -c "fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don"
+# fish -c "curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/HEAD/functions/fisher.fish | source && fisher install jorgebucaran/fisher"
+# fish -c "fisher install FabioAntunes/fish-nvm edc/bass franciscolourenco/don"
 # chsh -s "$(which fish)"
 
 # install zap
 sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
-zap --update
+# zap --update
 
 # cp "$HOME/.fzf/shell/key-bindings.fish" "$MYDIR/dotfiles/mackup/.config/fish/functions/fzf_key_bindings.fish"
 
@@ -106,18 +108,18 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # casks
 if [ "$(uname)" = "Darwin" ]; then
-   # brew install --cask 1password
-   brew install --cask alacritty
-   brew install --cask alfred           
-   brew install --cask discord          
-   # brew install --cask fantastical      
-   # brew install --cask home-assistant   
-   # brew install --cask obsidian         
-   # brew install --cask postman          
-   brew install --cask slack
-   # brew install --cask spacelauncher    
-   brew install --cask spotify
-   brew install --cask sioyek
+  # brew install --cask 1password
+  brew install --cask alacritty
+  brew install --cask alfred
+  brew install --cask discord
+  # brew install --cask fantastical
+  # brew install --cask home-assistant
+  # brew install --cask obsidian
+  # brew install --cask postman
+  brew install --cask slack
+  # brew install --cask spacelauncher
+  brew install --cask spotify
+  brew install --cask sioyek
 elif [ "$(uname)" = "Linux" ]; then
   # in case homebrew overwrite system python3 and pip3
   # NOTE: maybe just set: ENV PATH "$PATH:/home/linuxbrew/.linuxbrew/bin"  ??? even in mac os
