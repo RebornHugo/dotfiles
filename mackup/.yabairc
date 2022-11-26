@@ -42,16 +42,18 @@ yabai -m config window_gap                   5
 yabai -m rule --add app="^System Preferences$" manage=off
 yabai -m rule --add app="^Archive Utility$" manage=off
 yabai -m rule --add app="^Wally$" manage=off
-# yabai -m rule --add app="^Pika$" manage=off
-# yabai -m rule --add app="^balenaEtcher$" manage=off
 yabai -m rule --add app="^Creative Cloud$" manage=off
 yabai -m rule --add app="^Logi Options$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
 yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^Spotify$" manage=off
 yabai -m rule --add app="^FortiClient$" manage=off
-yabai -m rule --add app="^Telegram Lite$" manage=off
-yabai -m rule --add app="^WeChat$" manage=off
+# yabai -m rule --add app="^Telegram Lite$" manage=off
+# yabai -m rule --add app="^WeChat$" manage=off
 yabai -m rule --add app="^Alfred Preferences$" manage=off
+
+# apps to not blurred
+# yabai -m rule --add app="^Feishu$" border=off manage=off
+yabai -m rule --add app="^飞书$" border=off  
 
 echo "yabai configuration loaded.."
