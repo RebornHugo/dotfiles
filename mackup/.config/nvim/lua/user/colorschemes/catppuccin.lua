@@ -77,5 +77,11 @@ catppuccin.setup({
 				CursorLine = { bg = mocha.mantle }, -- otherwise, we can't even see the cursorline in the transparent mode
 			}
 		end,
+		frappe = function(mocha)
+			return {
+				-- Comment = { fg = mocha.flamingo },
+				CursorLine = { bg = mocha.mantle }, -- otherwise, we can't even see the cursorline in the transparent mode
+			}
+		end,
 	},
 })
