@@ -1,4 +1,5 @@
 -- vim.cmd [[setlocal conceallevel=2]]
+-- vim.opt_local.wrap = true, is setting in autocommands.lua
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
     return
@@ -17,7 +18,7 @@ local mappings = {
   -- TODO: merge all jaq into whickey leader-d, and set markdown preview to the same keybinding using ftplugin
   y = {
         name = "Markdown",
-    y = { "<cmd>MarkdownPreviewToggle<cr>", "MarkdownPreviewToggle" },
+    y = { "<cmd>MarkdownPreviewToggle<cr>", "MarkdownPreview" },
   },
 }
 which_key.register(mappings, opts)

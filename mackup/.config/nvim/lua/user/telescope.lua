@@ -79,8 +79,8 @@ telescope.setup {
       '--column',
       '--smart-case',
       -- following is the new thing
-      '-u',
-      '-u',
+      -- '-u',
+      -- '-u',
     },
 
     mappings = {
@@ -98,9 +98,12 @@ telescope.setup {
 
   pickers = {
 
-    -- live_grep = {  -- it should work in git file...
-    --   -- theme = "dropdown",
-    -- },
+    live_grep = {  -- it should work in git file...
+      -- theme = "dropdown",
+      additional_args = function(opts)
+          return {"--hidden"}
+      end
+    },
     -- grep_string = {
     --   -- theme = "dropdown",
     -- },
