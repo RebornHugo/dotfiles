@@ -141,12 +141,15 @@ return packer.startup(function(use)
   -- whic-key
   use "folke/which-key.nvim"
 
-  -- Markdown
+  -- Writing
+  -- Markdown --
   use {
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
   }
+  -- vimwiki --
+  use {"vimwiki/vimwiki", branch='dev'}
 
   -- Utility
   use({

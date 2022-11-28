@@ -14,7 +14,7 @@ null_ls.setup {
   debug = false,
   sources = {
     formatting.prettier.with {
-      extra_filetypes = { "toml", "solidity" },
+      extra_filetypes = { "toml", "solidity", "markdown", "vimwiki" },
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
     formatting.black.with { extra_args = { "--fast" } },
@@ -23,7 +23,7 @@ null_ls.setup {
     filetypes = { 'sh', 'zsh', 'bash' },
     args = { '-i', '2' },
     }),
-    formatting.google_java_format,
+    -- formatting.google_java_format,
     diagnostics.flake8,
     diagnostics.shellcheck,
     diagnostics.zsh
