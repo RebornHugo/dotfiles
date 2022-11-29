@@ -64,6 +64,7 @@ elif [ "$(uname)" = "Linux" ]; then
 fi
 tar xzf gitmux.tar.gz
 mv gitmux /usr/local/bin/gitmux
+/bin/rm gitmux.tar.gz
 
 # brew tap clementtsang/bottom
 # brew install bottom
