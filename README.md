@@ -26,6 +26,7 @@
 - [ ] toggle key of lsp-signature and reset cmp
 - [x] show underscores, refer to tokyonight
 - [x] zsh lsp: shellcheck, shfmt
+- [ ] vimwiki keybinding
 
 ## windows manager
 

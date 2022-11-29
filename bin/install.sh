@@ -56,8 +56,14 @@ brew install tealdeer
 brew install zoxide
 brew install gnu-sed # used for spectre
 
-# wget https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_macOS_amd64.tar.gz
-# unzip and move to /usr/local/bin/gitmux
+# install gitmux
+if [ "$(uname)" = "Darwin" ]; then
+  wget https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_macOS_amd64.tar.gz gitmux.tar.gz
+elif [ "$(uname)" = "Linux" ]; then
+  wget https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_linux_amd64.tar.gz gitmux.tar.gz
+fi
+tar xzf gitmux.tar.gz
+mv gitmux /usr/local/bin/gitmux
 
 # brew tap clementtsang/bottom
 # brew install bottom
