@@ -58,9 +58,9 @@ brew install gnu-sed # used for spectre
 
 # install gitmux
 if [ "$(uname)" = "Darwin" ]; then
-  wget https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_macOS_amd64.tar.gz gitmux.tar.gz
+  wget --output-document gitmux.tar.gz https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_macOS_amd64.tar.gz
 elif [ "$(uname)" = "Linux" ]; then
-  wget https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_linux_amd64.tar.gz gitmux.tar.gz
+  wget --output-document gitmux.tar.gz https://github.com/arl/gitmux/releases/download/v0.7.10/gitmux_0.7.10_linux_amd64.tar.gz
 fi
 tar xzf gitmux.tar.gz
 mv gitmux /usr/local/bin/gitmux
