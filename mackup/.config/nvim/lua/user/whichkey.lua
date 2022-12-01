@@ -117,7 +117,7 @@ local mappings = {
   e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   -- v = { "<cmd>vsplit<cr>", "vsplit" },
   -- h = { "<cmd>split<cr>", "split" },
-  -- w = { "<cmd>w<CR>", "Write" },
+  w = { "<cmd>w<CR>", "Write" },
 --   -- h = { "<cmd>nohlsearch<CR>", "No HL" },
 --   q = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" },
 -- ["/"] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<CR>+', "Comment" },
@@ -374,10 +374,11 @@ local mappings = {
   --   m = { ":MarkdownPreviewToggle<cr>", "Markdown" },
   -- }
 
-  w = {
+  v = {
         name = "wiki",
         w = "Open default wiki index file",
-        t = "Open default wiki index file in new tab",
+        -- t = "Open default wiki index file in new tab",
+        t = {"<cmd>VimwikiTable<cr>", "Table"},  -- overwrite default new tab keybinding
         s = "List available wiki index files",
         i = "Open default diary index file",
         C = { "<cmd>lua _NEW_WIKI()<CR>", "Create new wiki file" },

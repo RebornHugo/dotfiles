@@ -14,14 +14,23 @@ local opts = {
 
 local mappings = {
 
-  w = {
+  v = {
         name = "wiki",
-        -- h="HTML",
+        h="HTML",
         ["hh"]="HTML&Browse",
-        -- TODO: fix c
+        a = {"<cmd>VimwikiAll2HTML<cr>", "HTML all"},  -- overwrite default new tab keybinding
+        A = {"<cmd>VimwikiAll2HTML!<cr>", "HTML All"},  -- overwrite default new tab keybinding
+        b = {"<cmd>:VimwikiBacklinks<cr>", "show backlinks"},  -- overwrite default new tab keybinding
         -- ["w<leader>w"] = "Open diary wiki-file for today of the [count]'s wiki.",
   },
 }
 -- ["<CR>"]="Follow/create wiki link"
+
+local options = { noremap = true }
+-- vim.keymap.set("n", "<C-Backspace>", "VimwikiGoBackLink", options)
+-- vim.cmd("unmap <Plug><Backspace>")
+vim.cmd("nnoremap <Leader><Backspace> <Plug>VimwikiGoBackLink")
+-- vim.api.nvim_set_keymap("n", "<Leader><Backspace>", ":VimwikiGoBackLink<CR>", { noremap = true, silent = true, nowait = true })
+-- vim.keymap.set("n", "<leader><Backspace>", "VimwikiGoBackLink", options)
 
 which_key.register(mappings, opts)

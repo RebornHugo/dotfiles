@@ -3,7 +3,9 @@ vim.g.vimwiki_list = {
   {
     path = '~/Workspace/Writing/VimWiki/',
     path_html = '~/Workspace/Writing/VimWikiHTML/',
-    css_name = "github-markdown-light.css",
+    -- css_name = "github-markdown-light.css",
+    -- some beatifule css: https://www.npmjs.com/package/markdown-styles
+    css_name = "WiTex.css",
     syntax = 'markdown',
     ext = '.md',
     -- custom_wiki2html = 'vimwiki_markdown',
@@ -17,6 +19,7 @@ vim.g.vimwiki_list = {
     -- auto_toc = 1,
     -- html_filename_parameterization=1,
     links_space_char='_',
+    nested_syntaxes = { python = 'python', ['c++'] = 'cpp' },
     -- template_ext='.tpl',
   },
 }
@@ -32,6 +35,7 @@ vim.g.vimwiki_hl_headers = 1  -- use alternating colours for different heading l
 vim.g.vimwiki_markdown_link_ext = 1 -- add markdown file extension when generating links
 vim.g.taskwiki_markdown_syntax = "markdown"
 vim.g.indentLine_conceallevel = 2 -- indentline controlls concel
+vim.g.vimwiki_map_prefix = "<Leader>v"
 --vim.set.o.conceallevel = 1 -- so that I can see `` and full urls in markdown files
 
 vim.api.nvim_set_keymap("n", "<F3>", ":VimwikiDiaryPrevDay<CR>", { noremap = true, silent = true, nowait = true })
