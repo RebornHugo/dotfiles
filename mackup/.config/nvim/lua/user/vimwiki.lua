@@ -3,15 +3,15 @@ vim.g.vimwiki_list = {
   {
     path = '~/Workspace/Writing/VimWiki/',
     path_html = '~/Workspace/Writing/VimWikiHTML/',
-    css_name = "github-markdown.css",
+    css_name = "github-markdown-light.css",
     syntax = 'markdown',
     ext = '.md',
     -- custom_wiki2html = 'vimwiki_markdown',
     -- custom_wiki2html = "$HOME/.local/share/nvim/site/pack/packer/start/vimwiki/autoload/vimwiki/customwiki2html.sh",
-    custom_wiki2html = '/Users/hugoreborn/Downloads/vimwiki_converter/wiki2html.sh',
+    custom_wiki2html = '~/.config/nvim/misc/vimwiki/wiki2html.sh',
     template_default='markdown',
     template_ext='.html',
-    template_path='/Users/hugoreborn/Downloads/vimwiki_converter/template',
+    template_path='~/.config/nvim/misc/vimwiki/template/',
 
     -- ext = '/index.md',
     -- auto_toc = 1,
