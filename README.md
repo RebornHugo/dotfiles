@@ -26,7 +26,8 @@
 - [ ] toggle key of lsp-signature and reset cmp
 - [x] show underscores, refer to tokyonight
 - [x] zsh lsp: shellcheck, shfmt
-- [ ] vimwiki keybinding
+- [.] vimwiki keybinding
+- [ ] <c-f> command mode history not work
 
 ## windows manager
 
@@ -40,3 +41,17 @@
 ## MISC
 
 - [ ] Beancount
+
+## wiki
+- [ ] wiki2html: sed to make compatible, jump between header doesn't work
+- [ ] use local mathjax to accelerate conversion
+- [ ] use leader v instead of leader w
+- [ ] backlink and tag based hyperlink graph
+- [ ] remap <Backspace>
+- [ ] TODOLIST -> tasks
+- [ ] template for enter key when create new note
+- [ ] which-key add more vimwiki-local-mappings
+- [ ] add note template, tags, graph view
+
+
+
