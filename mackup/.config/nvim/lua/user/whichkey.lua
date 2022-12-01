@@ -117,7 +117,7 @@ local mappings = {
   e = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   -- v = { "<cmd>vsplit<cr>", "vsplit" },
   -- h = { "<cmd>split<cr>", "split" },
-  w = { "<cmd>w<CR>", "Write" },
+  -- w = { "<cmd>w<CR>", "Write" },
 --   -- h = { "<cmd>nohlsearch<CR>", "No HL" },
 --   q = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" },
 -- ["/"] = { '<cmd>lua require("Comment.api").toggle_current_linewise()<CR>+', "Comment" },
@@ -373,6 +373,23 @@ local mappings = {
   --   r = { ":silent only | Jaq<cr>", "Run Code" },
   --   m = { ":MarkdownPreviewToggle<cr>", "Markdown" },
   -- }
+
+  w = {
+        name = "wiki",
+        w = "Open default wiki index file",
+        t = "Open default wiki index file in new tab",
+        s = "List available wiki index files",
+        i = "Open default diary index file",
+        C = { "<cmd>lua _NEW_WIKI()<CR>", "Create new wiki file" },
+
+        ["<leader>"] = {
+          name="diary",
+          w = "Open diary wiki today",
+          t = "Open diary wiki today in new tab",
+          y = "Open diary wiki yesterday",
+          m = "Open diary wiki tomorrow",
+    }
+  },
 }
 
 local vopts = {
