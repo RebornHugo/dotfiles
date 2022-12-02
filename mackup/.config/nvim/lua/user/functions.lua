@@ -123,4 +123,11 @@ function M.concat_array(a, b)
     table.move(b, 1, #b, #result + 1, result)
     return result
 end
+
+function M.get_current_dir(sep)
+    local str = vim.fn.expand('%:p')
+    sep=sep or'/'
+    return str:match("(.*"..sep..")")
+end
+
 return M

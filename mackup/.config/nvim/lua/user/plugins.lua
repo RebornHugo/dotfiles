@@ -148,6 +148,7 @@ return packer.startup(function(use)
     run = "cd app && npm install",
     ft = "markdown",
   }
+  use 'ekickx/clipboard-image.nvim'
   -- vimwiki --
   use {"vimwiki/vimwiki", branch='dev'}
 
