@@ -15,7 +15,7 @@
 - [x] harpoon and marks UI
 - [x] show space and new line symbols(wrap in whichkey)
 - [ ] wait for official spectre with current file option
-- [ ] clipboard feature: save current clipboard content.
+- [ ] clipboard feature: save current clipboard content. x11 with xsel is slow
 - [ ] neoscrollbar
 - [x] disable virtual text using whichkey lsp line
 - [ ] what's {same_name}-E file
@@ -28,6 +28,7 @@
 - [x] zsh lsp: shellcheck, shfmt
 - [.] vimwiki keybinding
 - [ ] <c-f> command mode history not work
+- [ ] telescope preview image
 
 ## windows manager
 
@@ -45,13 +46,16 @@
 ## wiki
 - [ ] wiki2html: sed to make compatible, jump between header doesn't work
 - [ ] use local mathjax to accelerate conversion
-- [ ] use leader v instead of leader w
-- [ ] backlink and tag based hyperlink graph
-- [ ] remap <Backspace>
-- [ ] TODOLIST -> tasks
+- [x] use leader v instead of leader w
+- [.] backlink and tag based hyperlink graph
+- [x] remap <Backspace>
+- [ ] TODOLIST -> tasks warriors
 - [ ] template for enter key when create new note
-- [ ] which-key add more vimwiki-local-mappings
+- [x] which-key add more vimwiki-local-mappings
 - [ ] add note template, tags, graph view
+- [ ] share sync folder with ios obsidian
+- [ ] Zettelkasten workflow
 
-
-
+## Zotero and Sioyek
+- [ ] zotfiles with markdown plugin
+- [ ] export sioyek notes

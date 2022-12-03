@@ -137,6 +137,8 @@ local mappings = {
 
   B = {
     name = "Browse",
+    c = { [[ <Esc><Cmd>lua require('user.utils.cht').cht_input()<CR>]], "cht.sh" },
+    s = { [[ <Esc><Cmd>lua require('user.utils.cht').so_input()<CR>]], "Stack Overflow" },
     i = { "<cmd>BrowseInputSearch<cr>", "Input Search" },
     b = { "<cmd>Browse<cr>", "Browse" },
     d = { "<cmd>BrowseDevdocsSearch<cr>", "Devdocs" },

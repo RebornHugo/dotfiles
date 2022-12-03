@@ -55,6 +55,7 @@ brew install tealdeer
 # brew install wakatime-cli
 brew install zoxide
 brew install gnu-sed # used for spectre
+brew install so
 
 # install gitmux
 if [ "$(uname)" = "Darwin" ]; then

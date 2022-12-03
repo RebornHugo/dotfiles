@@ -45,3 +45,4 @@ vim.opt.iskeyword:append("-")
 vim.opt.list = false                            -- show hidden character, e.g. space, eol
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
+vim.opt.scrollback = 100000                     -- terminal scrollback size 
