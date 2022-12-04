@@ -27,7 +27,7 @@
 - [x] show underscores, refer to tokyonight
 - [x] zsh lsp: shellcheck, shfmt
 - [.] vimwiki keybinding
-- [ ] <c-f> command mode history not work
+- [x] <c-f> command mode history not work
 - [ ] telescope preview image
 
 ## windows manager

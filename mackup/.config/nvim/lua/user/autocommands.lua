@@ -42,11 +42,13 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 	end,
 })
 
-vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
-	callback = function()
-		vim.cmd("quit")
-	end,
-})
+-- -- NOTE: disable cmd mode <C-f> history
+-- vim.api.nvim_create_autocmd({ "CmdWinEnter" }, {
+-- 	callback = function()
+-- 		vim.cmd("quit")
+-- 	end,
+-- })
+
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	callback = function()
 		vim.cmd("set formatoptions-=cro")
