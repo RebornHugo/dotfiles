@@ -152,6 +152,16 @@ return packer.startup(function(use)
   -- vimwiki --
   use {"vimwiki/vimwiki", branch='dev'}
 
+  -- CSV
+  use {'chrisbra/csv.vim',
+    ft = {'csv'},
+    config = function()
+        vim.b.csv_arrange_align   = 'l*'
+        -- vim.g.csv_autocmd_arrange = 1
+        -- vim.g.csv_autocmd_arrange_size = 1024*1024
+        -- vim.g.csv_strict_columns  = 1
+    end,
+  }
   -- Utility
   use({
     "lalitmee/browse.nvim",
