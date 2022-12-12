@@ -134,7 +134,7 @@ telescope.setup {
     },
     lsp_definitions = {
       -- theme = "dropdown",
-      initial_mode = "normal",
+      initial_mode = "insert",
     },
     lsp_declarations = {
       -- theme = "dropdown",
