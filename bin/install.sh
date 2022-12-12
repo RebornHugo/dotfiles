@@ -17,6 +17,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install lazydocker
   brew install lazygit
   brew install lf
+  brew install stats
   # brew install fish
 elif [ "$(uname)" = "Linux" ]; then
 
