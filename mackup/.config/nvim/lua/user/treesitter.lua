@@ -66,6 +66,15 @@ configs.setup {
     enable = true,
   },
   indent = { enable = true, disable = { "python", "css", "rust" } },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = '<c-space>',
+      node_incremental = '<c-space>',
+      scope_incremental = '<c-s>',
+      node_decremental = '<c-backspace>',
+    },
+  },
   context_commentstring = {
     enable = true,
     enable_autocmd = false,

@@ -115,9 +115,16 @@ return packer.startup(function(use)
   -- use "tom-anders/telescope-vim-bookmarks.nvim"
 
   -- Treesitter
-  use {
-    "nvim-treesitter/nvim-treesitter",
-    commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
+  use { -- Highlight, edit, and navigate code
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      pcall(require('nvim-treesitter.install').update { with_sync = true })
+    end,
+  }
+
+  use { -- Additional text objects via treesitter
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    after = 'nvim-treesitter',
   }
 
   -- Git
@@ -202,7 +209,7 @@ return packer.startup(function(use)
         up = "<C-k>",
         right = "<C-l>",
         -- last_active = "<C-\\>",
-        next = "<C-Space>",
+        -- next = "<C-Space>",
       }
     }
   end
