@@ -33,7 +33,8 @@ alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
 
 # float / unfloat window and center on screen
 alt - t : yabai -m window --toggle float;\
-          yabai -m window --grid 9:6:1:1:4:7
+          yabai -m window --grid 30:6:1:1:4:28
+# yabai -m window --grid 9:6:1:1:4:7
 # yabai -m window --grid 6:6:1:1:4:4
 # yabai -m window --grid 4:4:1:1:2:2
 

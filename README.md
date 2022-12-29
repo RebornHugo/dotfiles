@@ -38,6 +38,7 @@
 ## TMUX
 
 - [x] auto rename windows by host name
+- [ ] alacritty key to switch nested tmux tab
 
 ## MISC
 
