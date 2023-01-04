@@ -14,7 +14,7 @@ selection:
   # program: /bin/zsh
 
 window:
-  opacity: 0.3
+  opacity: 0.5
   padding:
     x: 8
     y: 8
@@ -23,21 +23,25 @@ window:
 
 font:
   normal:
-    family: "SFMono Nerd Font"
+    # family: "SFMono Nerd Font"
+    # family: "Hack Nerd Font"
+    family: 'JetBrainsMono Nerd Font'
     style: Regular
   size: 21.0
   offset:
-      x: 0    # For letter spacing.
-      y: 3    # For line spacing.
+    x: 0 # For letter spacing.
+    y: 5 # For line spacing.
+
 mouse:
   hide_when_typing: true
-  
-# notice we must disable input method shortkey before using vim key_bindings, 
+
+# notice we must disable input method shortkey before using vim key_bindings,
 # ref: https://stackoverflow.com/questions/20245652/how-to-unbind-command-control-space-key-from-mac-os-x-10-9
 
 key_bindings:
 #    A full list with available key codes can be found here:
 #    https://docs.rs/glutin/*/glutin/event/enum.VirtualKeyCode.html#variants
+#    Tutorial of using hex code: https://www.joshmedeski.com/posts/macos-keyboard-shortcuts-for-tmux/
   - { key: F, mods: Command, chars: "lfcd\n" }
 
   # - { key: J, mods: Command, chars: "\x02\x54" }
@@ -50,6 +54,8 @@ key_bindings:
   # Select a new tmux session for the attached client interactively
   - { key: S, mods: Command, chars: "\x02\x73" }
   # Select window 1-9
+  # - { key: Key1, mods: Command|Shift, chars: "\x1b\x5b\x32\x34\x7e\x02\x31\x1b\x5b\x32\x34\x7e" }
+  - { key: Key1, mods: Command, chars: "\x02\x31" }
   - { key: Key1, mods: Command, chars: "\x02\x31" }
   - { key: Key2, mods: Command, chars: "\x02\x32" }
   - { key: Key3, mods: Command, chars: "\x02\x33" }
@@ -87,3 +93,10 @@ key_bindings:
 
   # vim most recent buffer
   - { key: Key6, mods: Control, chars: "\x1e" }
+
+# import:
+#   # uncomment the flavour you want below:
+#   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+#   # - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+#   # - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+#   #  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml

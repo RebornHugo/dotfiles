@@ -18,6 +18,11 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install lazygit
   brew install lf
   brew install stats
+  # font
+  brew tap homebrew/cask-fonts
+  brew install --cask font-jetbrains-mono
+  brew tap epk/epk
+  brew install --cask font-sf-mono-nerd-font
   # brew install fish
 elif [ "$(uname)" = "Linux" ]; then
 
