@@ -112,11 +112,13 @@ return packer.startup(function(use)
 
   -- Telescope
   use { "nvim-telescope/telescope.nvim" }
+  use {"jvgrootveld/telescope-zoxide"}
   -- use "tom-anders/telescope-vim-bookmarks.nvim"
 
   -- Treesitter
   use { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    -- commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
     run = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,

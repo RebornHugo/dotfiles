@@ -240,6 +240,7 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     T = { "<cmd>TodoTelescope<cr>", "TODO Telescope" },
+    z = { "<cmd>lua require('telescope').extensions.zoxide.list()<cr>", "zoxide" },
   },
 
   g = {

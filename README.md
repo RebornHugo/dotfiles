@@ -29,6 +29,7 @@
 - [.] vimwiki keybinding
 - [x] <c-f> command mode history not work
 - [ ] telescope preview image
+- [ ] try folke/noice.nvim
 
 ## windows manager
 
