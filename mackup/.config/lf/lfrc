@@ -1,3 +1,6 @@
+map v toggle
+map V invert
+
 set preview true
 
 set previewer "~/.config/lf/previewer.sh"

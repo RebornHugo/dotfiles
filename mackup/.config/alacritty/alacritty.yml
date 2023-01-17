@@ -94,9 +94,9 @@ key_bindings:
   # vim most recent buffer
   - { key: Key6, mods: Control, chars: "\x1e" }
 
-# import:
-#   # uncomment the flavour you want below:
-#   - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
-#   # - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
-#   # - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
-#   #  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
+import:
+  # uncomment the flavour you want below:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+  # - ~/.config/alacritty/catppuccin/catppuccin-macchiato.yml
+  # - ~/.config/alacritty/catppuccin/catppuccin-frappe.yml
+  #  - ~/.config/alacritty/catppuccin/catppuccin-latte.yml
