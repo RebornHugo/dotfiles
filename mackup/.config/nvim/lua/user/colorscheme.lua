@@ -1,4 +1,3 @@
-vim.o.termguicolors = true
 -- darkplus onedarker nightfox nordfox terafox catppuccin tokyonight
 local colorscheme = "catppuccin"
 

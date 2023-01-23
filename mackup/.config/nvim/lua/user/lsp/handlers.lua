@@ -27,17 +27,6 @@ M.setup = function()
     -- disable virtual text
     virtual_lines = false,
     -- virtual_text = true,
-    virtual_text = {
-      -- spacing = 7,
-      -- update_in_insert = false,
-      -- severity_sort = true,
-      -- prefix = "<-",
-      prefix = "●",
-      source = "if_many", -- Or "always"
-      -- format = function(diag)
-      --   return diag.message .. "blah"
-      -- end,
-    },
 
     -- show signs
     signs = {
