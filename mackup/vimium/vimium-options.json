@@ -2,7 +2,15 @@
   "settingsVersion": "1.67",
   "exclusionRules": [
     {
-      "pattern": "https://api.ihint.me/shuang/",
+      "pattern": "https://api.ihint.me/shuang/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://leetcode.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://leetcode.cn/*",
       "passKeys": ""
     }
   ],
