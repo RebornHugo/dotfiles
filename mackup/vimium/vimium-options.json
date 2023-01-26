@@ -6,11 +6,15 @@
       "passKeys": ""
     },
     {
-      "pattern": "https://leetcode.com/*",
+      "pattern": "https://leetcode.com/problem*",
       "passKeys": ""
     },
     {
-      "pattern": "https://leetcode.cn/*",
+      "pattern": "https://leetcode.cn/problem*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https://www.youtube.com/watch*",
       "passKeys": ""
     }
   ],
