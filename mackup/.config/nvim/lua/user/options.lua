@@ -37,7 +37,7 @@ vim.opt.wrap = false                            -- display lines as one long lin
 vim.opt.linebreak = true                        -- soft wrap, break by line instead of word
 vim.opt.scrolloff = 8                           -- is one of my fav
 vim.opt.sidescrolloff = 8
-vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
+vim.opt.guifont = "SFMono Nerd Font:h21"               -- the font used in graphical neovim applications
 vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
@@ -53,7 +53,7 @@ vim.opt.scrollback = 100000                     -- terminal scrollback size
 vim.cmd([[
 if exists("g:neovide")
     " Put anything you want to happen only in Neovide here
-set guifont=SFMono\ Nerd\ Font:h21
+" set guifont=SFMono\ Nerd\ Font:h21
 set linespace=5
 let g:neovide_transparency = 0.0
 let g:transparency = 0.8
