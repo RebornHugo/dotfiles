@@ -64,7 +64,7 @@ return packer.startup(function(use)
   -- Colorschemes
   use { "folke/tokyonight.nvim" }
   use { "lunarvim/darkplus.nvim" }
-  use { "LunarVim/onedarker.nvim" }
+  use { "navarasu/onedark.nvim" }
   use { "EdenEast/nightfox.nvim" }
   use {
     "catppuccin/nvim",
