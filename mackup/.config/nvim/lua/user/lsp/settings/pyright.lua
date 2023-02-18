@@ -9,6 +9,7 @@ return {
           functionReturnTypes = true,
         },
       },
+      -- pythonPath = "/usr/local/bin/python3",
     },
   },
 }

@@ -45,3 +45,10 @@ local python = Terminal:new { cmd = "ipython", hidden = true }
 function _PYTHON_TOGGLE()
   python:toggle()
 end
+
+local htop = Terminal:new { cmd = "htop", hidden = true }
+
+-- term created by lua function can't be closed by <c-\>
+function _HTOP_TOGGLE()
+  htop:toggle()
+end
