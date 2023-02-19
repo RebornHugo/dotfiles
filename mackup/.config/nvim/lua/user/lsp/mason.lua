@@ -11,6 +11,7 @@ local servers = {
 	"clangd",
 	"cmake",
   "dockerls",
+  "rust_analyzer",
 	-- "grammarly"  -- need token
 }
 local linters = {
