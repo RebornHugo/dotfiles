@@ -23,6 +23,7 @@ local formatters = {
 	"black",
 	"stylua",
 	"shfmt", -- bash
+	"rustfmt", -- rust
 }
 
 local daps = {
