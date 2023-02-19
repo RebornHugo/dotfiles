@@ -59,11 +59,11 @@ yabai -m rule --add app="^Stats$" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
 
 # custom signals
-yabai -m signal --add event=application_activated \
-                      app="^Alacritty$"               \
-                      action="yabai -m config window_border_blur on"
-yabai -m signal --add event=application_deactivated \
-                      app="^Alacritty$"               \
-                      action="yabai -m config window_border_blur off"
+# yabai -m signal --add event=application_activated \
+#                       app="^Alacritty$"               \
+#                       action="yabai -m config window_border_blur on"
+# yabai -m signal --add event=application_deactivated \
+#                       app="^Alacritty$"               \
+#                       action="yabai -m config window_border_blur off"
 
 echo "yabai configuration loaded.."
