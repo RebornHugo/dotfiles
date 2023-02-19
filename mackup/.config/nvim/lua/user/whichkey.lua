@@ -146,15 +146,18 @@ local mappings = {
     -- m = { "<cmd>BrowseMdnSearch<cr>", "Mdn" },
   },
 
+  -- package management
   p = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    S = { "<cmd>PackerStatus<cr>", "Status" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
+    name = "Lazy",
+		s = { "<cmd>Lazy update<cr>", "Update" },
+		i = { "<cmd>Lazy install<cr>", "Install" },
+		l = { "<cmd>Lazy log<cr>", "Log" },
+		p = { "<cmd>Lazy profile<cr>", "Profile" },
+		d = { "<cmd>Lazy debug<cr>", "Debug" },
+		c = { "<cmd>Lazy clean<cr>", "Clean" },
+		S = { "<cmd>Lazy<cr>", "Lazy" },
   },
--- 
+
   o = {
     name = "Options",
     c = { '<cmd>lua vim.g.cmp_active=false<cr>', "Completion off" },

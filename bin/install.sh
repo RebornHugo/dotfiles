@@ -153,6 +153,7 @@ fi
 
 # PackerSync silently
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+# TODO: add LazySync silently
 
 # dap
 pip3 install debugpy
