@@ -97,6 +97,7 @@ return lazy.setup({
 	{ "simrat39/symbols-outline.nvim" },
 	{ "p00f/clangd_extensions.nvim" },
 	{ "https://git.sr.ht/~whynothugo/lsp_lines.nvim" },
+	{ "simrat39/rust-tools.nvim" },
 	-- TODO: what's lsp-saga
 
 	-- Marks
@@ -212,5 +213,4 @@ return lazy.setup({
 			})
 		end,
 	},
-
 })

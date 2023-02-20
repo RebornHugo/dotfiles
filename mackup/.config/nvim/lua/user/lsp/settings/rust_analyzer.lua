@@ -1,8 +1,4 @@
--- return {
--- 	cmd = { "rustup", "run", "stable", "rust-analyzer" },
--- }
-
-return {
+require("rust-tools").setup({
 	tools = {
 		on_initialized = function()
 			vim.cmd([[
@@ -24,4 +20,5 @@ return {
 			},
 		},
 	},
-}
+})
+return {}
