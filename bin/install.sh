@@ -152,7 +152,9 @@ fi
 # npm is not excutable
 
 # PackerSync silently
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+# nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless "+Lazy! sync" +qa
+# TODO: add LazySync silently
 
 # dap
 pip3 install debugpy

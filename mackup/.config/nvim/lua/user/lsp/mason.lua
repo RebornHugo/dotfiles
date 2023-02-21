@@ -11,6 +11,7 @@ local servers = {
 	"clangd",
 	"cmake",
   "dockerls",
+  "rust_analyzer",
 	-- "grammarly"  -- need token
 }
 local linters = {
@@ -22,6 +23,7 @@ local formatters = {
 	"black",
 	"stylua",
 	"shfmt", -- bash
+	"rustfmt", -- rust
 }
 
 local daps = {
@@ -73,7 +75,10 @@ for _, server in pairs(servers) do
 		opts = vim.tbl_deep_extend("force", conf_opts, opts)
 	end
 
-	lspconfig[server].setup(opts)
+  if server ~= "rust_analyzer" then
+    -- rust is configed directly through rust-tools
+    lspconfig[server].setup(opts)
+  end
 end
 
 -- -- TODO: add something to installer later
