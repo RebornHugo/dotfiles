@@ -22,6 +22,7 @@ dashboard.section.header.val = {
   [[ \/_/\/_/\/____/\/___/  \/__/    \/_/\/_/\/_/\/_/]],
 }
 dashboard.section.buttons.val = {
+  button("s", "勒" .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
   button("f", " " .. " Find file", ":Telescope find_files <CR>"),
   button("e", " " .. " New file", ":ene <BAR> startinsert <CR>"),
   button("p", " " .. " Find project", ":lua require('telescope').extensions.projects.projects()<CR>"),
