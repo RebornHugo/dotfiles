@@ -137,6 +137,9 @@ if [ "$(uname)" = "Darwin" ]; then
   # brew install --cask spacelauncher
   brew install --cask spotify
   brew install --cask sioyek
+  echo "increase keystroke speed"
+  defaults write -g KeyRepeat -int 1   # 1 for 15ms
+  defaults write -g InitialKeyRepeat -int 13  # 13 for 195ms
 elif [ "$(uname)" = "Linux" ]; then
   # in case homebrew overwrite system python3 and pip3
   # NOTE: maybe just set: ENV PATH "$PATH:/home/linuxbrew/.linuxbrew/bin"  ??? even in mac os
