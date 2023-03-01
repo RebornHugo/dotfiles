@@ -43,6 +43,7 @@ local kind_icons = {
 	Event = "",
 	Operator = "",
 	TypeParameter = "",
+	Suggestion = "✨",
 }
 
 cmp.setup({
@@ -102,6 +103,7 @@ cmp.setup({
 			-- vim_item.kind = kind_icons[vim_item.kind]
 			vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind)
 			vim_item.menu = ({
+				codeium = "[codeium]",
 				nvim_lsp = "[LSP]",
 				nvim_lua = "[lua]",
 				luasnip = "[luasnip]",
@@ -114,6 +116,7 @@ cmp.setup({
 	},
 -- snippet path: .local/share/nvim/site/pack/packer/start/friendly-snippets/snippets 
 	sources = {
+		{ name = "codeium" },
 		{ name = "nvim_lsp" },
 		{ name = "nvim_lua" },
 		{ name = "luasnip" },
