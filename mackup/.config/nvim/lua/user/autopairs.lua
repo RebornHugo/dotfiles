@@ -13,7 +13,7 @@ npairs.setup {
   },
   disable_filetype = { "TelescopePrompt", "spectre_panel" },
   fast_wrap = {
-    map = "<C-f>",  -- NOTICE: better keybinding is in need
+    map = "<C-g>",  -- NOTICE: better keybinding is in need
     chars = { "{", "[", "(", '"', "'" },
     pattern = string.gsub([[ [%'%"%)%>%]%)%}%,] ]], "%s+", ""),
     offset = 0, -- Offset from pattern match

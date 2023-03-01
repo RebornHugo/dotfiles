@@ -1,4 +1,4 @@
--- darkplus onedarker nightfox nordfox terafox catppuccin tokyonight
+-- darkplus onedark nightfox nordfox terafox catppuccin tokyonight
 local colorscheme = "catppuccin"
 
 -- activate setup
