@@ -8,15 +8,21 @@ if not status_ok then
   return
 end
 
-local actions = require "telescope.actions"
+local actions = require("telescope.actions")
 local builtin = require("telescope.builtin")
 
-telescope.setup {
+telescope.setup({
   defaults = {
 
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
+    layout_config = {
+      preview_width = 0.6,
+      prompt_position = "top",
+    },
+    prompt_position = "top",
+    sorting_strategy = "ascending",
     file_ignore_patterns = {
       ".git/",
       "target/",
@@ -71,19 +77,19 @@ telescope.setup {
       "%.flac",
       "%.tar.gz",
       "%.npz",
-      -- tusimple internal 
+      -- tusimple internal
       "ttgen_%/",
     },
-    -- customize live_grep to support hidden filese, 
+    -- customize live_grep to support hidden filese,
     -- see: https://github.com/nvim-telescope/telescope.nvim/issues/470
     vimgrep_arguments = {
-      'rg',
-      '--color=never',
-      '--no-heading',
-      '--with-filename',
-      '--line-number',
-      '--column',
-      '--smart-case',
+      "rg",
+      "--color=never",
+      "--no-heading",
+      "--with-filename",
+      "--line-number",
+      "--column",
+      "--smart-case",
       -- following is the new thing
       -- '-u',
       -- '-u',
@@ -104,22 +110,22 @@ telescope.setup {
 
   pickers = {
 
-    live_grep = {  -- it should work in git file...
+    live_grep = { -- it should work in git file...
       -- theme = "dropdown",
       additional_args = function(opts)
-          return {"--hidden"}
-      end
+        return { "--hidden" }
+      end,
     },
     -- grep_string = {
     --   -- theme = "dropdown",
     -- },
     find_files = {
       -- theme = "dropdown",
-      previewer = false,
+      previewer = true,
     },
     git_files = {
       -- theme = "dropdown",
-      previewer = false,
+      previewer = true,
       show_untracked = true,
     },
     buffers = {
@@ -151,7 +157,6 @@ telescope.setup {
       initial_mode = "normal",
     },
 
-
     -- Default configuration for builtin pickers goes here:
     -- picker_name = {
     --   picker_config_key = value,
@@ -179,7 +184,7 @@ telescope.setup {
           end,
           after_action = function(selection)
             print("Directory changed to " .. selection.path)
-          end
+          end,
         },
         ["<C-s>"] = { action = z_utils.create_basic_command("split") },
         ["<C-v>"] = { action = z_utils.create_basic_command("vsplit") },
@@ -188,18 +193,18 @@ telescope.setup {
           keepinsert = true,
           action = function(selection)
             builtin.file_browser({ cwd = selection.path })
-          end
+          end,
         },
         ["<C-f>"] = {
           keepinsert = true,
           action = function(selection)
             builtin.find_files({ cwd = selection.path })
-          end
-        }
-      }
-    }
+          end,
+        },
+      },
+    },
   },
-}
+})
 
 -- Telescope Extensions
 telescope.load_extension("zoxide")

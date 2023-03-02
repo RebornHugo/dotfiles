@@ -31,6 +31,7 @@
 - [ ] telescope preview image
 - [ ] try folke/noice.nvim
 - [x] Restore session when reopening nvim
+- [ ] undo history plugin
 
 ## windows manager
 
