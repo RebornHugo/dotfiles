@@ -30,6 +30,7 @@
 - [x] <c-f> command mode history not work
 - [ ] telescope preview image
 - [ ] try folke/noice.nvim
+- [x] Restore session when reopening nvim
 
 ## windows manager
 
@@ -40,6 +41,7 @@
 
 - [x] auto rename windows by host name
 - [ ] alacritty key to switch nested tmux tab
+- [x] Try josh nerd-fonts
 
 ## MISC
 
@@ -56,7 +58,7 @@
 - [x] which-key add more vimwiki-local-mappings
 - [ ] add note template, tags, graph view
 - [ ] share sync folder with ios obsidian
-- [ ] Zettelkasten workflow
+- [x] Zettelkasten workflow
 
 ## Zotero and Sioyek
 - [ ] zotfiles with markdown plugin
