@@ -24,9 +24,9 @@ alt - r : yabai -m space --rotate 90
 # toggle window fullscreen zoom
 alt - f : yabai -m window --toggle zoom-fullscreen
 
-alt - s : yabai -m window --toggle sticky;\
-          yabai -m window --toggle topmost;\
-          yabai -m window --toggle pip
+# alt - s : yabai -m window --toggle sticky;\
+#           yabai -m window --toggle topmost;\
+#           yabai -m window --toggle pip
 
 # toggle padding and gap
 alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
@@ -87,7 +87,9 @@ shift + alt - a : yabai -m window --resize left:-20:0
 shift + alt - s : yabai -m window --resize bottom:0:20
 shift + alt - w : yabai -m window --resize top:0:-20
 shift + alt - d : yabai -m window --resize right:20:0
-
+# resize faster
+ctrl + shift + alt - a : yabai -m window --resize left:-250:0
+ctrl + shift + alt - d : yabai -m window --resize right:250:0
 # decrease window size
 # shift + cmd - a : yabai -m window --resize left:20:0
 # shift + cmd - s : yabai -m window --resize bottom:0:-20
