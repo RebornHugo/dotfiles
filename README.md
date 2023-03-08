@@ -43,6 +43,7 @@
 - [x] auto rename windows by host name
 - [ ] alacritty key to switch nested tmux tab
 - [x] Try josh nerd-fonts
+- [x] edit tmux output with $EDITOR like zellij
 
 ## MISC
 
