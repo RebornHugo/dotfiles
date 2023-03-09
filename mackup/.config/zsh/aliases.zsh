@@ -1,12 +1,19 @@
 #!/bin/sh
+
+alias c='clear'
+# git
+alias gc='git commit'
+alias gs='git status'
+
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
-alias nvimdot='nvim ~/Workspace/Coding/dotfiles'
+alias nvdot='nvim ~/Workspace/Coding/dotfiles'
 
 # tools
 alias nv="TERM=alacritty nvim"
 alias nvim="TERM=alacritty nvim"
 # abbr :q "tmux kill-server"  # not work..
 alias tn="tmux new -s \$(pwd | sed 's/.*\///g')"
+alias ta="tmux attach"
 alias sio="/Applications/sioyek.app/Contents/MacOS/sioyek"
 alias l="lsd  --group-dirs first -A"
 # abbr ld "lazydocker"
@@ -31,9 +38,12 @@ alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
 # use bat to replace cat
-if command -v bat &> /dev/null; then
-  alias cat="bat -pp --theme \"Visual Studio Dark+\"" 
-  alias catt="bat --theme \"Visual Studio Dark+\"" 
+if
+  command -v bat &
+  >/dev/null
+then
+  alias cat="bat -pp --theme \"Visual Studio Dark+\""
+  alias catt="bat --theme \"Visual Studio Dark+\""
 fi
 
 alias streamingtest="bash <(curl -L -s http://check.unlock.media)"
