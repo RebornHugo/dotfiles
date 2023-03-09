@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias c='clear'
+
 # git
 alias gc='git commit'
 alias gs='git status'
@@ -38,12 +39,9 @@ alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
 
 # use bat to replace cat
-if
-  command -v bat &
-  >/dev/null
-then
-  alias cat="bat -pp --theme \"Visual Studio Dark+\""
-  alias catt="bat --theme \"Visual Studio Dark+\""
+if command -v bat &> /dev/null; then
+  alias cat="bat -pp --theme \"Visual Studio Dark+\"" 
+  alias catt="bat --theme \"Visual Studio Dark+\"" 
 fi
 
 alias streamingtest="bash <(curl -L -s http://check.unlock.media)"
