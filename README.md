@@ -32,6 +32,8 @@
 - [ ] try folke/noice.nvim
 - [x] Restore session when reopening nvim
 - [ ] undo history plugin
+- [x] clangd: goto header, sp, lsp action with diff hint, rename/refactor, use lsp symbol
+- [ ] fold code
 
 ## windows manager
 
