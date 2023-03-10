@@ -180,7 +180,7 @@ return {
   {
     "olimorris/persisted.nvim",
     config = function()
-      require("persisted").setup({})
+      require("persisted").setup()
     end,
   },
 }
