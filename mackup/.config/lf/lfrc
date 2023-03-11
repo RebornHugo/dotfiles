@@ -3,7 +3,7 @@ map V invert
 
 set preview true
 
-set previewer "~/.config/lf/previewer.sh"
+set previewer "~/.config/bin/lf-previewer.sh"
 map I $~/.config/lf/previewer.sh $f | less -R
 
 set hidden on
