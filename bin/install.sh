@@ -131,7 +131,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask discord
   # brew install --cask fantastical
   # brew install --cask home-assistant
-  # brew install --cask obsidian
+  brew install --cask obsidian
   # brew install --cask postman
   brew install --cask slack
   # brew install --cask spacelauncher
