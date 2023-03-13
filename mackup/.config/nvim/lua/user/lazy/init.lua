@@ -111,8 +111,6 @@ return {
     ft = "markdown",
   },
   { "ekickx/clipboard-image.nvim" },
-  -- vimwiki --
-  { "vimwiki/vimwiki", branch = "dev" },
 
   -- CSV
   {
