@@ -12,10 +12,6 @@
     {
       "pattern": "https://leetcode.cn/problem*",
       "passKeys": ""
-    },
-    {
-      "pattern": "https://www.youtube.com/watch*",
-      "passKeys": ""
     }
   ],
   "filterLinkHints": false,
