@@ -35,4 +35,4 @@ if not status_ok then
 end
 
 -- Install your plugins here
-return lazy.setup('user.lazy_plugins')
+return lazy.setup('user.lazy')

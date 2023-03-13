@@ -1,6 +1,7 @@
 return {
     "jcdickinson/codeium.nvim",
     dependencies = {
+        "onsails/lspkind-nvim",
         "nvim-lua/plenary.nvim",
         "MunifTanjim/nui.nvim",
         "hrsh7th/nvim-cmp",
@@ -16,6 +17,7 @@ return {
 -- -- }
 -- -- vim.g.codeium_enabled = false
 -- -- vim.g.codeium_manual = true
+
 -- return {
 --   "Exafunction/codeium.vim",
 --   -- enabled = false,
