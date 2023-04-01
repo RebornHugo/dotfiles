@@ -28,6 +28,9 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask font-sf-mono-nerd-font
   # brew install fish
 elif [ "$(uname)" = "Linux" ]; then
+  # for ssh clipboard
+  apt install -y xclip
+  apt install -y xsel
 
   echo "building tmux for ubuntu"
   apt remove -y tmux && apt update -y && apt install -y libncurses5-dev libncursesw5-dev

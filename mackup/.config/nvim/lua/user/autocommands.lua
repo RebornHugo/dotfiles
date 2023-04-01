@@ -83,3 +83,4 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	end,
 })
 
+vim.cmd("lua require('user.lsp.handlers').toggle_format_on_save()")
