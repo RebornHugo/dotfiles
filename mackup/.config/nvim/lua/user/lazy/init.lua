@@ -63,11 +63,6 @@ return {
   { "christianchiarulli/harpoon" },
   { "MattesGroeger/vim-bookmarks" },
 
-  -- Telescope
-  { "nvim-telescope/telescope.nvim" },
-  { "jvgrootveld/telescope-zoxide" },
-  -- use "tom-anders/telescope-vim-bookmarks.nvim"
-
   -- Treesitter
   { -- Highlight, edit, and navigate code
     "nvim-treesitter/nvim-treesitter",

@@ -17,6 +17,7 @@ telescope.setup({
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = { "smart" },
+    -- path_display = { "truncate = 4", shorten = { len = 2, exclude = { 1, -1 } } },
     layout_config = {
       preview_width = 0.6,
       prompt_position = "top",
