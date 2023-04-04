@@ -23,7 +23,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install stats
   # font
   brew tap homebrew/cask-fonts
-  brew install --cask font-jetbrains-mono
+  brew install --cask font-jetbrains-mono-nerd-font
   brew tap epk/epk
   brew install --cask font-sf-mono-nerd-font
   # brew install fish
@@ -140,9 +140,26 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask obsidian
   # brew install --cask postman
   brew install --cask slack
+  brew install --cask feishu
+  brew install --cask telegram
   # brew install --cask spacelauncher
   brew install --cask spotify
   brew install --cask sioyek
+  brew install --cask karabiner-elements
+  brew install --cask clashx
+  brew install --cask stats
+  brew install --cask wechat
+  brew install --cask visual-studio-code
+  brew install --cask zotero
+  brew install --cask dropbox
+  brew install --cask trello
+  brew install --cask vlc
+  brew install --cask qq
+  brew install --cask zoom
+  brew install --cask anki
+  # brew install --cask forticlient
+  # brew install --cask trello
+
   echo "increase keystroke speed"
   defaults write -g KeyRepeat -int 1         # 1 for 15ms
   defaults write -g InitialKeyRepeat -int 13 # 13 for 195ms
