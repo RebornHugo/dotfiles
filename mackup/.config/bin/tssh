@@ -1,5 +1,6 @@
 #!/bin/sh
 
+export DISPLAY=:0
 CURRENT_NAME=$(tmux display-message -p '#W')
 
 # parse command into ALL

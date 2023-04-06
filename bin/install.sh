@@ -9,6 +9,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install cmake
   brew install tmux
   brew install git
+  brew install htop
   brew install trash-cli
   brew install skhd
   brew services start skhd
@@ -132,6 +133,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 if [ "$(uname)" = "Darwin" ]; then
   # brew install --cask 1password
   brew install --cask alacritty
+  brew install --cask xquartz
   # brew install --cask alfred
   brew install --cask raycast
   brew install --cask discord
@@ -152,7 +154,6 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask visual-studio-code
   brew install --cask zotero
   brew install --cask dropbox
-  brew install --cask trello
   brew install --cask vlc
   brew install --cask qq
   brew install --cask zoom
@@ -182,5 +183,7 @@ fi
 nvim --headless "+Lazy! sync" +qa
 # TODO: add LazySync silently
 
-# dap
+# lsp related..
 pip3 install debugpy
+brew install shellcheck
+brew install prettier
