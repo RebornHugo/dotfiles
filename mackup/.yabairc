@@ -57,6 +57,7 @@ yabai -m rule --add app="^Stats$" manage=off
 # yabai -m rule --add app="^WeChat$" manage=off
 # yabai -m rule --add app="^飞书$" manage=off
 yabai -m rule --add label="About This Mac" app="System Information" title="About This Mac" manage=off
+yabai -m rule --add app="System Settings" manage=off
 
 # custom signals
 # yabai -m signal --add event=application_activated \

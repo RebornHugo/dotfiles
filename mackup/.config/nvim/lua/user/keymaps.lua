@@ -39,7 +39,10 @@ keymap("n", "<backspace>", "<cmd>nohlsearch<CR>", opts)  -- TODO: try backspace
 keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste without refill clipboard by deleted content
-keymap("v", "p", '"_dP', opts)
+-- ref: https://vimhelp.org/change.txt.html#v_p
+keymap("v", "p", 'P', opts)
+keymap("v", "P", 'p', opts)
+-- keymap("v", "p", '"_dP', opts)
 
 -- move cursor to next/prev line in jetbrans's style (not possible, https://www.reddit.com/r/vim/comments/aaxpxi/remapping_ctrlenter_in_vim/)
 -- TODO(Hugo): jump to new line without entering insert_mode(customize Enter/Ctrl+Enter)
@@ -47,20 +50,14 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("n", "<S-<CR>>", "O<Esc>")
 
 -- refer to:  https://github.com/sdaschner/dotfiles/blob/master/.ideavimrc
--- TODO(Hugo): Better delete with _dP
-
 -- TODO(Hugo): comment and move cursor to new line? (if current line is empty, dont move to new line..)
 
 -- TODO(Hugo): move current/selected line up/down, using ctrl+shift+j/k, ref: https://www.reddit.com/r/neovim/comments/mbj8m5/how_to_setup_ctrlshiftkey_mappings_in_neovim_and/
 keymap("n", "<C-S-j>", "<Esc>:m +1<CR>gi", opts)
 
--- TODO(Hugo): goto Marks
-
 -- TODO(Hugo): dont overwrite key <H> and <G>
 
 -- TODO(Hugo): fzf integration
-
--- TODO(Hugo): NvimTree is not updated when new file is added
 
 -- TODO(Hugo): last tab / buffer
 
@@ -77,12 +74,6 @@ keymap("v", ">", ">gv", opts)
 
 -- NvimTree
 -- keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-
--- Telescope  (refactor in whichkey.lua)
--- keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
--- keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
--- keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
--- keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
 -- Git  (refactor in whichkey.lua)
 -- keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)

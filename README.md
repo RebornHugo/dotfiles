@@ -34,6 +34,7 @@
 - [ ] undo history plugin
 - [x] clangd: goto header, sp, lsp action with diff hint, rename/refactor, use lsp symbol
 - [ ] fold code
+- [x] fix visual mode paste keymap
 
 ## windows manager
 
@@ -52,6 +53,7 @@
 - [ ] Beancount
 
 ## wiki
+
 - [ ] wiki2html: sed to make compatible, jump between header doesn't work
 - [ ] use local mathjax to accelerate conversion
 - [x] use leader v instead of leader w
@@ -65,5 +67,6 @@
 - [x] Zettelkasten workflow
 
 ## Zotero and Sioyek
+
 - [ ] zotfiles with markdown plugin
 - [ ] export sioyek notes
