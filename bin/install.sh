@@ -22,6 +22,8 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install lazygit
   brew install lf
   brew install stats
+  brew install orbstack # docker-cli alternative
+  brew install neovide
   # font
   brew tap homebrew/cask-fonts
   brew install --cask font-jetbrains-mono-nerd-font
@@ -69,6 +71,8 @@ brew install tealdeer
 brew install zoxide
 brew install gnu-sed # used for spectre
 brew install so
+brew tap arl/arl
+brew install gitmux
 
 # install gitmux
 if [ "$(uname)" = "Darwin" ]; then
@@ -134,17 +138,12 @@ if [ "$(uname)" = "Darwin" ]; then
   # brew install --cask 1password
   brew install --cask alacritty
   brew install --cask xquartz
-  # brew install --cask alfred
-  brew install --cask raycast
+  brew install --cask raycast # free alternative to alfred
   brew install --cask discord
-  # brew install --cask fantastical
-  # brew install --cask home-assistant
   brew install --cask obsidian
-  # brew install --cask postman
   brew install --cask slack
   brew install --cask feishu
   brew install --cask telegram
-  # brew install --cask spacelauncher
   brew install --cask spotify
   brew install --cask sioyek
   brew install --cask karabiner-elements
@@ -158,8 +157,9 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask qq
   brew install --cask zoom
   brew install --cask anki
+  brew install --cask futubull
   # brew install --cask forticlient
-  # brew install --cask trello
+  # brew install --cask trello # install through app store
 
   echo "increase keystroke speed"
   defaults write -g KeyRepeat -int 1         # 1 for 15ms
@@ -187,3 +187,4 @@ nvim --headless "+Lazy! sync" +qa
 pip3 install debugpy
 brew install shellcheck
 brew install prettier
+brew install shfmt
