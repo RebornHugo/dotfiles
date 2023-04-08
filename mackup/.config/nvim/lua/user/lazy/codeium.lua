@@ -15,8 +15,9 @@
 return {
   "Exafunction/codeium.vim",
 
+  enabled = true,
   event = "BufRead",
-  -- cmd = "Codeium",
+  cmd = "Codeium",
   -- disable_filetype = { "TelescopePrompt"},
 
   config = function()

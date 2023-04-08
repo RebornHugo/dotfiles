@@ -15,7 +15,7 @@
 - [x] harpoon and marks UI
 - [x] show space and new line symbols(wrap in whichkey)
 - [ ] wait for official spectre with current file option
-- [ ] clipboard feature: save current clipboard content. x11 with xsel is slow
+- [x] clipboard feature: save current clipboard content. x11 with xsel is slow
 - [ ] neoscrollbar
 - [x] disable virtual text using whichkey lsp line
 - [ ] what's {same_name}-E file
@@ -31,7 +31,7 @@
 - [ ] telescope preview image
 - [ ] try folke/noice.nvim
 - [x] Restore session when reopening nvim
-- [ ] undo history plugin
+- [x] undo history plugin
 - [x] clangd: goto header, sp, lsp action with diff hint, rename/refactor, use lsp symbol
 - [ ] fold code
 - [x] fix visual mode paste keymap
@@ -51,6 +51,7 @@
 ## MISC
 
 - [ ] Beancount
+- [ ] mackup for newsboat or find alternatives
 
 ## wiki
 
@@ -69,4 +70,4 @@
 ## Zotero and Sioyek
 
 - [ ] zotfiles with markdown plugin
-- [ ] export sioyek notes
+- [ ] export sioyek notes. I'm still syncing .db file...
