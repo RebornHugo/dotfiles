@@ -59,6 +59,11 @@ cmp.setup({
     -- C-b and C-Space conflicts tmux and IME, C-f conflicts codium
 		-- ["<C-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-1), { "i", "c" }),
 		-- ["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
+    -- Specify `cmp.config.disable` if you want to remove the default mapping.
+		["<C-f>"] = cmp.config.disable,
+		["<C-b>"] = cmp.config.disable,
+    ["<C-n>"] = cmp.config.disable,
+    ["<C-p>"] = cmp.config.disable,
 		["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "c" }),
     -- e denotes exit completion
 		["<C-e>"] = cmp.mapping({
