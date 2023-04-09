@@ -24,6 +24,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install stats
   brew install orbstack # docker-cli alternative
   brew install neovide
+  brew install pandoc
   # font
   brew tap homebrew/cask-fonts
   brew install --cask font-jetbrains-mono-nerd-font
