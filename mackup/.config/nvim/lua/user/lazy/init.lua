@@ -34,22 +34,22 @@ return {
   -- cmp plugins
   { "hrsh7th/nvim-cmp" }, -- The completion plugin
   { "hrsh7th/cmp-buffer" }, -- buffer completions
-  { "hrsh7th/cmp-path", commit = "447c87cdd6e6d6a1d2488b1d43108bfa217f56e1" }, -- path completions
-  { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" }, -- snippet completions
-  { "hrsh7th/cmp-nvim-lsp", commit = "affe808a5c56b71630f17aa7c38e15c59fd648a8" },
-  { "hrsh7th/cmp-nvim-lua", commit = "d276254e7198ab7d00f117e88e223b4bd8c02d21" },
-
-  -- snippets
-  { "L3MON4D3/LuaSnip", commit = "8f8d493e7836f2697df878ef9c128337cbf2bb84" }, --snippet engine
-  { "rafamadriz/friendly-snippets", commit = "2be79d8a9b03d4175ba6b3d14b082680de1b31b1" }, -- a bunch of snippets to use
+  { "hrsh7th/cmp-path" }, -- path completions
+  { "saadparwaiz1/cmp_luasnip" }, -- snippet completions
+  { "hrsh7th/cmp-nvim-lsp" },
+  { "hrsh7th/cmp-nvim-lua" },
 
   -- LSP
   -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
-  { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" }, -- enable LSP
+  { "neovim/nvim-lspconfig" }, -- enable LSP
   { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12" },
   { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" },
   { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" }, -- for formatters and linters
-  { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" },
+  {
+    "RRethy/vim-illuminate",
+    commit = "a2e8476af3f3e993bb0d6477438aad3096512e42",
+    event = "VeryLazy",
+  },
   { "ray-x/lsp_signature.nvim" },
   { "SmiteshP/nvim-navic" },
   { "lvimuser/lsp-inlayhints.nvim" },
@@ -64,7 +64,8 @@ return {
   { "MattesGroeger/vim-bookmarks" },
 
   -- Treesitter
-  { -- Highlight, edit, and navigate code
+  {
+    -- Highlight, edit, and navigate code
     "nvim-treesitter/nvim-treesitter",
     -- commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
     build = function()
@@ -72,7 +73,8 @@ return {
     end,
   },
 
-  { -- Additional text objects via treesitter
+  {
+    -- Additional text objects via treesitter
     "nvim-treesitter/nvim-treesitter-textobjects",
     dependencies = "nvim-treesitter",
   },
@@ -121,11 +123,15 @@ return {
   -- Utility
   {
     "lalitmee/browse.nvim",
+    event = "VeryLazy",
     dependencies = { "nvim-telescope/telescope.nvim" },
   },
 
   -- Comment
-  { "numToStr/Comment.nvim", commit = "97a188a98b5a3a6f9b1b850799ac078faa17ab67" },
+  {
+    "numToStr/Comment.nvim",
+    event = "VeryLazy",
+  },
   { "folke/todo-comments.nvim" },
 
   -- Project
@@ -134,19 +140,6 @@ return {
 
   -- Editing Support
   { "karb94/neoscroll.nvim" },
-
-  -- Graveyard by Christian
-  {
-    "folke/trouble.nvim",
-    -- dependencies = "kyazdani42/nvim-web-devicons",
-    config = function()
-      require("trouble").setup({
-        -- your configuration comes here
-        -- or leave it empty to use the default settings
-        -- refer to the configuration section below
-      })
-    end,
-  },
 
   -- better vim and tmux navigator, <C-HJKL>
   {

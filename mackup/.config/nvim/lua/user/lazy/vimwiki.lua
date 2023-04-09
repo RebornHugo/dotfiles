@@ -110,5 +110,6 @@ return {
   {
     "vimwiki/vimwiki",
     branch = "dev",
+    event = "VeryLazy",
   },
 }

@@ -47,6 +47,7 @@
 - [ ] alacritty key to switch nested tmux tab
 - [x] Try josh nerd-fonts
 - [x] edit tmux output with $EDITOR like zellij
+- [ ] Restore tmux session when rebooting
 
 ## MISC
 
