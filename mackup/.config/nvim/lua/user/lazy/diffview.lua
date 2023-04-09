@@ -1,6 +1,6 @@
 return {
   "sindrets/diffview.nvim",
-  lazy = false,
+  event = "VeryLazy",
   dependencies = "nvim-lua/plenary.nvim",
   -- keys = {
   --   { "<leader>gd", "<cmd>DiffviewOpen<cr>", desc = "NeoTree" },

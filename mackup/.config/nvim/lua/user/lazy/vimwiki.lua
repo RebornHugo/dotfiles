@@ -14,7 +14,6 @@ vim.g.vimwiki_list = {
     template_default = "markdown",
     template_ext = ".html",
     template_path = "~/.config/nvim/misc/vimwiki/template/",
-
     -- ext = '/index.md',
     -- auto_toc = 1,
     -- html_filename_parameterization=1,
@@ -110,6 +109,7 @@ return {
   {
     "vimwiki/vimwiki",
     branch = "dev",
-    event = "VeryLazy",
+    -- event = "VeryLazy",
+    ft = { "markdown", "vimwiki" },
   },
 }

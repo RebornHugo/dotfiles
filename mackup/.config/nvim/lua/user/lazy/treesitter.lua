@@ -8,6 +8,7 @@ return {
     build = function()
       pcall(require("nvim-treesitter.install").update({ with_sync = true }))
     end,
+    lazy = true,
     config = function()
       local status_ok, configs = pcall(require, "nvim-treesitter.configs")
       if not status_ok then
@@ -182,6 +183,10 @@ return {
     -- Additional text objects via treesitter
     "nvim-treesitter/nvim-treesitter-textobjects",
     dependencies = "nvim-treesitter",
+    event = "VeryLazy",
+  },
+  {
+    "JoosepAlviste/nvim-ts-context-commentstring",
     event = "VeryLazy",
   },
 }
