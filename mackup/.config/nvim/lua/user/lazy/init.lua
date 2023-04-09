@@ -1,7 +1,7 @@
 return {
   -- My plugins here
   { "nvim-lua/plenary.nvim" }, -- Useful lua functions used by lots of plugins
-  { "windwp/nvim-autopairs", commit = "4fc96c8f3df89b6d23e5092d31c866c53a346347" }, -- Autopairs, integrates with both cmp and treesitter
+  { "windwp/nvim-autopairs" }, -- Autopairs, integrates with both cmp and treesitter
   { "JoosepAlviste/nvim-ts-context-commentstring", commit = "4d3a68c41a53add8804f471fcc49bb398fe8de08" },
   { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" },
   { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" },
@@ -63,22 +63,6 @@ return {
   { "christianchiarulli/harpoon" },
   { "MattesGroeger/vim-bookmarks" },
 
-  -- Treesitter
-  {
-    -- Highlight, edit, and navigate code
-    "nvim-treesitter/nvim-treesitter",
-    -- commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac",
-    build = function()
-      pcall(require("nvim-treesitter.install").update({ with_sync = true }))
-    end,
-  },
-
-  {
-    -- Additional text objects via treesitter
-    "nvim-treesitter/nvim-treesitter-textobjects",
-    dependencies = "nvim-treesitter",
-  },
-
   -- Git
   { "lewis6991/gitsigns.nvim" },
   -- use "f-person/git-blame.nvim"
@@ -128,10 +112,6 @@ return {
   },
 
   -- Comment
-  {
-    "numToStr/Comment.nvim",
-    event = "VeryLazy",
-  },
   { "folke/todo-comments.nvim" },
 
   -- Project
