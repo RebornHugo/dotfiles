@@ -46,6 +46,7 @@ vim.opt.list = false                            -- show hidden character, e.g. s
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 vim.opt.scrollback = 100000                     -- terminal scrollback size 
+vim.opt.signcolumn = "auto:3"
 
 -- neovide
 -- vim.opt.guifont = { "SFMono Nerd Font", ":h21" }
