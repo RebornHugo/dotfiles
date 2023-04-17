@@ -51,7 +51,6 @@ return {
   },
   { "ray-x/lsp_signature.nvim" },
   { "SmiteshP/nvim-navic" },
-  { "lvimuser/lsp-inlayhints.nvim" },
   { "simrat39/symbols-outline.nvim" },
   { "p00f/clangd_extensions.nvim" },
   -- { "https://git.sr.ht/~whynothugo/lsp_lines.nvim" },

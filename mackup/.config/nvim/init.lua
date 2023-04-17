@@ -6,7 +6,6 @@ require("user.autocommands")
 require("user.colorscheme")
 require("user.cmp")
 -- require "user.navic"  -- used in lualine
-require("user.lsp-inlayhints")
 require("user.telescope")
 require("user.autopairs")
 require("user.gitsigns")
