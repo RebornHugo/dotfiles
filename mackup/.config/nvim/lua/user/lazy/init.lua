@@ -41,9 +41,9 @@ return {
   -- LSP
   -- use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" } -- simple to use language server installer
   { "neovim/nvim-lspconfig" }, -- enable LSP
-  { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12" },
-  { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" },
-  { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" }, -- for formatters and linters
+  { "williamboman/mason.nvim" },
+  { "williamboman/mason-lspconfig.nvim" },
+  { "jose-elias-alvarez/null-ls.nvim" }, -- for formatters and linters
   {
     "RRethy/vim-illuminate",
     commit = "a2e8476af3f3e993bb0d6477438aad3096512e42",

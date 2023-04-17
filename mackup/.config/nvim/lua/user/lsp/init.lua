@@ -19,16 +19,18 @@ M.server_capabilities = function()
     end,
   }, function(choice)
     -- print(active_client_map[choice])
-    print(vim.inspect(vim.lsp.get_active_clients()[active_client_map[choice]].server_capabilities.executeCommandProvider))
+    print(
+      vim.inspect(vim.lsp.get_active_clients()[active_client_map[choice]].server_capabilities.executeCommandProvider)
+    )
     vim.pretty_print(vim.lsp.get_active_clients()[active_client_map[choice]].server_capabilities)
   end)
 end
 
-require "user.lsp.lsp-signature"
--- require "user.lsp.lsp-installer"
+require("user.lsp.lsp-signature")
+-- require("user.lsp.lsp-installer")
 require("user.lsp.mason")
 require("user.lsp.handlers").setup()
-require "user.lsp.null-ls"
+require("user.lsp.null-ls")
 
 -- virtual_text
 local l_status_ok, lsp_lines = pcall(require, "lsp_lines")
