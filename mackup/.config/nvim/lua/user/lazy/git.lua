@@ -87,6 +87,7 @@ return {
         },
       })
     end,
+    event = "VeryLazy",
   },
 
   -- use "f-person/git-blame.nvim"

@@ -53,5 +53,6 @@ return {
         debug_mode = false,
       })
     end,
+    event = "BufRead",
   },
 }
