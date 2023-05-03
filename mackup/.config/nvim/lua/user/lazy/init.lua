@@ -62,10 +62,6 @@ return {
   { "christianchiarulli/harpoon" },
   { "MattesGroeger/vim-bookmarks" },
 
-  -- Git
-  { "lewis6991/gitsigns.nvim" },
-  -- use "f-person/git-blame.nvim"
-
   -- DAP
   { "mfussenegger/nvim-dap" },
   { "rcarriga/nvim-dap-ui" },

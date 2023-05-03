@@ -8,7 +8,6 @@ require("user.cmp")
 -- require "user.navic"  -- used in lualine
 require("user.telescope")
 require("user.autopairs")
-require("user.gitsigns")
 require("user.nvim-tree")
 require("user.bufferline")
 reload("user.lualine")
