@@ -40,6 +40,7 @@
 
 - [ ] yabai restore layout after rebooting
 - [ ] BUG: skhd status error
+- [ ] auto yabai load-sa; https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release)
 
 ## TMUX
 
@@ -48,6 +49,7 @@
 - [x] Try josh nerd-fonts
 - [x] edit tmux output with $EDITOR like zellij
 - [ ] Restore tmux session when rebooting
+- [ ] select scripts(kill python, predictor; clear cores; ) in Popup
 
 ## MISC
 

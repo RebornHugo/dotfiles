@@ -4,12 +4,12 @@ return {
   { "windwp/nvim-autopairs" }, -- Autopairs, integrates with both cmp and treesitter
   { "kyazdani42/nvim-web-devicons", commit = "563f3635c2d8a7be7933b9e547f7c178ba0d4352" },
   { "kyazdani42/nvim-tree.lua", commit = "7282f7de8aedf861fe0162a559fc2b214383c51c" },
-  { "moll/vim-bbye", commit = "25ef93ac5a87526111f43e5110675032dbcacf56" },
+  { "moll/vim-bbye" },
   { "akinsho/toggleterm.nvim" },
   { "lewis6991/impatient.nvim" },
 
   -- Statusline
-  { "nvim-lualine/lualine.nvim", commit = "a52f078026b27694d2290e34efa61a6e4a690621" },
+  { "nvim-lualine/lualine.nvim" },
 
   -- Colorschemes
   { "folke/tokyonight.nvim" },
