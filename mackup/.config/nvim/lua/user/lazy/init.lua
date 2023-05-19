@@ -7,6 +7,7 @@ return {
   { "moll/vim-bbye" },
   { "akinsho/toggleterm.nvim" },
   { "lewis6991/impatient.nvim" },
+  { "tpope/vim-surround" },
 
   -- Statusline
   { "nvim-lualine/lualine.nvim" },
