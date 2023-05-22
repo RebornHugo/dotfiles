@@ -7,7 +7,16 @@ return {
   { "moll/vim-bbye" },
   { "akinsho/toggleterm.nvim" },
   { "lewis6991/impatient.nvim" },
-  { "tpope/vim-surround" },
+  {
+    "kylechui/nvim-surround", -- extensions of "tpope/vim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+      require("nvim-surround").setup({
+        -- Configuration here, or leave empty to use defaults
+      })
+    end,
+  },
 
   -- Statusline
   { "nvim-lualine/lualine.nvim" },
@@ -46,7 +55,6 @@ return {
   { "jose-elias-alvarez/null-ls.nvim" }, -- for formatters and linters
   {
     "RRethy/vim-illuminate",
-    commit = "a2e8476af3f3e993bb0d6477438aad3096512e42",
     event = "VeryLazy",
   },
   { "ray-x/lsp_signature.nvim" },
