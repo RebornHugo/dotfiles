@@ -5,7 +5,7 @@ return {
   opts = {},
   keys = {
     {
-      "s", -- vim native s is short for cl which is mentioned in help s:
+      "S", -- vim native s is short for cl which is mentioned in help s:
       mode = { "n", "x", "o" },
       function()
         -- default options: exact mode, multi window, all directions, with a backdrop
@@ -13,14 +13,14 @@ return {
       end,
       desc = "Flash",
     },
-    {
-      "S",
-      mode = { "n", "o", "x" },
-      function()
-        require("flash").treesitter()
-      end,
-      desc = "Flash Treesitter",
-    },
+    -- {
+    --   "S",
+    --   mode = { "n", "o", "x" },
+    --   function()
+    --     require("flash").treesitter()
+    --   end,
+    --   desc = "Flash Treesitter",
+    -- },
     {
       "r",
       mode = "o",
