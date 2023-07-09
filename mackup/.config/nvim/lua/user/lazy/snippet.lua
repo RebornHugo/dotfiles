@@ -2,10 +2,10 @@
 return {
   {
     "L3MON4D3/LuaSnip",
-    event = "VeryLazy",
+    -- event = "BufRead",
   }, --snippet engine
   {
     "rafamadriz/friendly-snippets",
-    event = "VeryLazy",
+    -- event = "BufRead",
   }, -- a bunch of snippets to use
 }

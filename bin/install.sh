@@ -138,6 +138,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 if [ "$(uname)" = "Darwin" ]; then
   # brew install --cask 1password
   brew install --cask alacritty
+  brew install --cask kitty
   brew install --cask xquartz
   brew install --cask raycast # free alternative to alfred
   brew install --cask discord
