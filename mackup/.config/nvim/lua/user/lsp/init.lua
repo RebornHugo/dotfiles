@@ -1,4 +1,14 @@
 M = {}
+
+-- require("neodev").setup({
+--   -- add any options here, or leave empty to use the default settings
+-- })
+local status_ok, neodev = pcall(require, "neodev")
+if not status_ok then
+  return
+end
+neodev.setup()
+
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
   return

@@ -17,6 +17,7 @@ return {
       })
     end,
   },
+  { "folke/neodev.nvim", event = "VeryLazy", opts = {} },
 
   -- Statusline
   { "nvim-lualine/lualine.nvim" },

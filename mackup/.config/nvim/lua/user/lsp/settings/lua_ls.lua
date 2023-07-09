@@ -13,6 +13,10 @@ return {
       telemetry = {
         enable = false,
       },
+      -- for folke/neodev
+      completion = {
+        callSnippet = "Replace",
+      },
     },
   },
 }
