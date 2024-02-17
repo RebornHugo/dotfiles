@@ -27,6 +27,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install pandoc
   # font
   brew tap homebrew/cask-fonts
+  ## brew install --cask https://raw.githubusercontent.com/Homebrew/homebrew-cask-fonts/c6f6dbdf5da109fdcc01d86703bd7d64329f143d/Casks/font-jetbrains-mono-nerd-font.rb
   brew install --cask font-jetbrains-mono-nerd-font
   brew tap epk/epk
   brew install --cask font-sf-mono-nerd-font

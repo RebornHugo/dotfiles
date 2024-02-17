@@ -6,7 +6,7 @@ set preview true
 set previewer "~/.config/bin/lf-previewer.sh"
 map I $~/.config/lf/previewer.sh $f | less -R
 
-set hidden on
+set hidden true
 # interpreter for shell commands (needs to be POSIX compatible)
 set shell sh
 
