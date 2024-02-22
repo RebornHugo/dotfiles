@@ -6,6 +6,7 @@
 ; 	insteadOf = https://github.com/
 [core]
 	editor = nvim
+  quotePath = false ; for nvim telescope with filename containing emoji: https://github.com/nvim-telescope/telescope.nvim/issues/2900
  	; excludesfile = /Users/hugoreborn/.gitignore
   ; pager = delta
 ; [interactive]
