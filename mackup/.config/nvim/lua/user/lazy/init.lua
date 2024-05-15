@@ -41,7 +41,7 @@ return {
   { "NvChad/nvim-colorizer.lua" },
 
   -- cmp plugins
-  { "hrsh7th/nvim-cmp" }, -- The completion plugin
+  { "hrsh7th/nvim-cmp", event = "InsertEnter", dependencies = { "kdheepak/cmp-latex-symbols" } }, -- The completion plugin
   { "hrsh7th/cmp-buffer" }, -- buffer completions
   { "hrsh7th/cmp-path" }, -- path completions
   { "saadparwaiz1/cmp_luasnip" }, -- snippet completions
@@ -53,7 +53,7 @@ return {
   { "neovim/nvim-lspconfig" }, -- enable LSP
   { "williamboman/mason.nvim" },
   { "williamboman/mason-lspconfig.nvim" },
-  { "jose-elias-alvarez/null-ls.nvim" }, -- for formatters and linters
+  { "nvimtools/none-ls.nvim" }, -- for formatters and linters
   {
     "RRethy/vim-illuminate",
     event = "VeryLazy",
@@ -144,6 +144,7 @@ return {
         },
       })
     end,
+    event = "VeryLazy",
   },
   -- session management
   {

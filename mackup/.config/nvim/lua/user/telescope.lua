@@ -120,6 +120,10 @@ telescope.setup({
     -- grep_string = {
     --   -- theme = "dropdown",
     -- },
+    git_status = {
+      -- theme = "dropdown",
+      previewer = true,
+    },
     find_files = {
       -- theme = "dropdown",
       previewer = true,
