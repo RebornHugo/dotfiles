@@ -14,7 +14,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install skhd
   brew services start skhd
   brew install yabai
-  brew services start yabai
+  yabai --start-service
   # https://felixkratz.github.io/SketchyBar/setup
   # https://github.com/FelixKratz/dotfiles
   brew install sketchybar
@@ -116,7 +116,7 @@ fi
 # chsh -s "$(which fish)"
 
 # install zap
-sh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh)
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.sh) --branch release-v1
 # zap --update
 
 # cp "$HOME/.fzf/shell/key-bindings.fish" "$MYDIR/dotfiles/mackup/.config/fish/functions/fzf_key_bindings.fish"

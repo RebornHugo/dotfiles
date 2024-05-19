@@ -1,4 +1,4 @@
-local null_ls_status_ok, null_ls = pcall(require, "null-ls")
+local null_ls_status_ok, null_ls = pcall(require, "none-ls")
 if not null_ls_status_ok then
   return
 end
@@ -27,7 +27,8 @@ null_ls.setup {
     -- formatting.google_java_format,
     diagnostics.flake8,
     diagnostics.shellcheck,
-    diagnostics.zsh
+    diagnostics.zsh,
+    require("none-ls.diagnostics.eslint"),
 -- TODO: formatting and diagnostics for cpp
   },
 }

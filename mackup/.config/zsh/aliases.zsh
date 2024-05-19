@@ -3,15 +3,15 @@
 alias c='clear'
 
 # git
-alias gc='git commit'
+# alias gc='git commit'
 alias gs='git status'
 
 alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
 alias nvdot='nvim ~/Workspace/Coding/dotfiles'
 
 # tools
-alias nv="TERM=alacritty nvim"
-alias nvim="TERM=alacritty nvim"
+alias nv="nvim"
+alias nvim="nvim"
 # abbr :q "tmux kill-server"  # not work..
 alias tn="tmux new -s \$(pwd | sed 's/.*\///g')"
 alias ta="tmux attach"
