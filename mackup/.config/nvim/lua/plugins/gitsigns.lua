@@ -57,8 +57,7 @@ return {
   keys = {
     -- git hunk navigation - previous / next
     { "<leader>gs", ":Gitsigns stage_hunk<CR>", desc = "Stage Hunk" },
-    { "<leader>gj", ":Gitsigns next_hunk<CR>", desc = "Goto next git hunk" },
-    { "<leader>gk", ":Gitsigns prev_hunk<CR>", desc = "Goto previous git hunk" },
+    { "<leader>gr", ":Gitsigns reset_hunk<CR>", desc = "Reset Hunk" },
     { "]g", ":Gitsigns next_hunk<CR>", desc = "Goto next git hunk" },
     { "[g", ":Gitsigns prev_hunk<CR>", desc = "Goto previous git hunk" },
   },
