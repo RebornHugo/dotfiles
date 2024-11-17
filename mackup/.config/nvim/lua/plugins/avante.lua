@@ -9,6 +9,9 @@ return {
     -- openai = {
     --   model = "gpt-4o-mini",
     -- },
+    --
+
+    -- provider = "siliconflow",
     provider = "qianwen",
     vendors = {
       qianwen = {
@@ -17,6 +20,12 @@ return {
         endpoint = "https://dashscope.aliyuncs.com/compatible-mode/v1",
         -- model = "qwen-coder-plus-latest",
         model = "qwen2.5-coder-32b-instruct",
+      },
+      siliconflow = {
+        __inherited_from = "openai",
+        api_key_name = "SILICONFLOW_API_KEY",
+        endpoint = "https://api.siliconflow.cn/v1",
+        model = "Qwen/Qwen2.5-Coder-32B-Instruct",
       },
     },
   },
