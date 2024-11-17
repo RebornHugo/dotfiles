@@ -28,7 +28,7 @@ return {
           { action = "ene | startinsert",                              desc = " New File",        icon = " ", key = "n" },
           { action = 'lua LazyVim.pick("oldfiles")()',                 desc = " Recent Files",    icon = " ", key = "r" },
           { action = 'lua LazyVim.pick("live_grep")()',                desc = " Find Text",       icon = " ", key = "t" },
-          { action = '<cmd>Telescope git_files <CR>',                      desc = " Git Files",       icon = " ", key = "g" },
+          -- { action = '<cmd>Telescope git_files <CR>',                      desc = " Git Files",       icon = " ", key = "g" },
           { action = '<cmd>Telescope git_status <CR>',                     desc = " Changed Files",   icon = " ", key = "o" },
           { action = 'lua LazyVim.pick.config_files()()',              desc = " Config",          icon = " ", key = "c" },
           { action = 'lua require("persistence").load()',              desc = " Restore Session", icon = " ", key = "s" },

@@ -41,8 +41,8 @@ return {
       end, "Prev Hunk")
       map("n", "]H", function() gs.nav_hunk("last") end, "Last Hunk")
       map("n", "[H", function() gs.nav_hunk("first") end, "First Hunk")
-      -- map({ "n", "v" }, "<leader>ghs", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
-      -- map({ "n", "v" }, "<leader>ghr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
+      map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>", "Stage Hunk")
+      map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>", "Reset Hunk")
       map("n", "<leader>ghS", gs.stage_buffer, "Stage Buffer")
       map("n", "<leader>ghu", gs.undo_stage_hunk, "Undo Stage Hunk")
       map("n", "<leader>ghR", gs.reset_buffer, "Reset Buffer")
@@ -52,13 +52,16 @@ return {
       map("n", "<leader>ghd", gs.diffthis, "Diff This")
       map("n", "<leader>ghD", function() gs.diffthis("~") end, "Diff This ~")
       map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>", "GitSigns Select Hunk")
+      -- hugo custom keymaps
+      -- vim.keymap.del("n", "<leader>gs")
     end,
   },
-  keys = {
-    -- git hunk navigation - previous / next
-    { "<leader>gs", ":Gitsigns stage_hunk<CR>", desc = "Stage Hunk" },
-    { "<leader>gr", ":Gitsigns reset_hunk<CR>", desc = "Reset Hunk" },
-    { "]g", ":Gitsigns next_hunk<CR>", desc = "Goto next git hunk" },
-    { "[g", ":Gitsigns prev_hunk<CR>", desc = "Goto previous git hunk" },
-  },
+  -- keys = {
+  -- git hunk navigation - previous / next
+  -- vim.keymap.del("n", "<leader>gs")
+  -- { "<leader>gs", ":Gitsigns stage_hunk<CR>", desc = "Stage Hunk" },
+  -- { "<leader>gr", ":Gitsigns reset_hunk<CR>", desc = "Reset Hunk" },
+  -- { "]g", ":Gitsigns next_hunk<CR>", desc = "Goto next git hunk" },
+  -- { "[g", ":Gitsigns prev_hunk<CR>", desc = "Goto previous git hunk" },
+  -- },
 }

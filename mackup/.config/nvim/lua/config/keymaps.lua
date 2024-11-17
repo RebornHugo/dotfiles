@@ -12,3 +12,9 @@ end, { desc = "Delete Buffer and Window" })
 -- Better paste without refill clipboard by deleted content
 map("v", "p", "P", {})
 map("v", "P", "p", {})
+
+-- vim.keymap.del("n", "<leader>gs") -- doesn't work
+vim.keymap.del("n", "<leader>sk") -- use <leader>fk for telescope keymaps
+vim.keymap.del("n", "<leader>fT") -- disable Terminal (cwd)
+vim.keymap.del("n", "<leader>ft") -- Terminal (Root Dir)
+map("n", "<leader>ft", LazyVim.pick("live_grep"), { desc = "Grep (Root Dir)" })
