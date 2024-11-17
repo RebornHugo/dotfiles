@@ -12,7 +12,7 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 - [x] python-dap
 - [ ] mark, harpoon?
 - [ ] save with space w
-- [ ] terminal / window with space t, delete leader f t
+- [x] terminal / window with space t, delete leader f t
 - [x] diagnostic not work
 - [x] moving between terminal and vim window with ctrl + j/k/h/l
 - [ ]  symbol is not consistent

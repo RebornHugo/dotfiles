@@ -9,6 +9,7 @@ HISTFILE=~/.zsh_history
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/functions.zsh"
+plug "$HOME/.config/zsh/keys.zsh"
 
 # autosuggest and completion setting
 ## case insensitive path-completion (better to add in supercharge)

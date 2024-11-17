@@ -18,3 +18,23 @@ vim.keymap.del("n", "<leader>sk") -- use <leader>fk for telescope keymaps
 vim.keymap.del("n", "<leader>fT") -- disable Terminal (cwd)
 vim.keymap.del("n", "<leader>ft") -- Terminal (Root Dir)
 map("n", "<leader>ft", LazyVim.pick("live_grep"), { desc = "Grep (Root Dir)" })
+
+-- -- ipython is not work
+-- if vim.fn.executable("ipython") == 1 then
+--   local function open_ipython_terminal()
+--     require("toggleterm").Terminal
+--       :new({
+--         cmd = "ipython",
+--         hidden = true,
+--         direction = "float",
+--         float_opts = {
+--           border = "curved",
+--           width = 120,
+--           height = 30,
+--         },
+--       })
+--       :toggle()
+--   end
+--
+--   map("n", "<leader>tp", open_ipython_terminal, { desc = "Floating Terminal with IPython" })
+-- end

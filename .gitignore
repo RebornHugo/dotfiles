@@ -7,3 +7,7 @@ mackup/.aws/credentials
 
 # vim
 mackup/.config/nvim/plugin/packer_compiled.lua
+
+# confidential
+*keys.sh
+*keys.zsh
