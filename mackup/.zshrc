@@ -31,7 +31,7 @@ plug "zap-zsh/vim"
 plug "zap-zsh/fzf"
 # plug "zap-zsh/exa"
 plug "zsh-users/zsh-syntax-highlighting"
-# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # FZF
 export FZF_CTRL_R_OPTS="--reverse --preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
