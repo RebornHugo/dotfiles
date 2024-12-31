@@ -4,14 +4,15 @@
 -- Shorten function name
 local map = LazyVim.safe_keymap_set
 
-map("n", "<backspace>", "<cmd>nohlsearch<CR>", { desc = "clear highligh" })
+map("n", "<backspace>", "<cmd>nohlsearch<CR>", { desc = "clear highlight" })
+-- Delete current buffer and its window using Snacks plugin
 map("n", "<S-q>", function()
   Snacks.bufdelete()
 end, { desc = "Delete Buffer and Window" })
 
 -- Better paste without refill clipboard by deleted content
-map("v", "p", "P", {})
-map("v", "P", "p", {})
+map("v", "p", '"_dP', { desc = "Paste without overwriting clipboard" })
+map("v", "P", '"_dp', { desc = "Paste before without overwriting clipboard" })
 
 -- vim.keymap.del("n", "<leader>gs") -- doesn't work
 vim.keymap.del("n", "<leader>sk") -- use <leader>fk for telescope keymaps
