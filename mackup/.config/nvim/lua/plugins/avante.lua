@@ -11,8 +11,7 @@ return {
     -- },
     --
 
-    -- provider = "siliconflow",
-    provider = "qianwen",
+    provider = "deepseek",
     vendors = {
       qianwen = {
         __inherited_from = "openai",
@@ -26,6 +25,12 @@ return {
         api_key_name = "SILICONFLOW_API_KEY",
         endpoint = "https://api.siliconflow.cn/v1",
         model = "Qwen/Qwen2.5-Coder-32B-Instruct",
+      },
+      deepseek = {
+        __inherited_from = "openai",
+        api_key_name = "HUGO_DEEPSEEK_API_KEY",
+        endpoint = "https://api.deepseek.com/v1",
+        model = "deepseek-chat",
       },
     },
   },
