@@ -10,9 +10,13 @@ return {
     --   model = "gpt-4o-mini",
     -- },
     --
-
-    provider = "deepseek",
-    vendors = {
+    cursor_applying_provider = "deepseek_chat", -- In this example, use Groq for applying, but you can also use any provider you want.
+    behaviour = {
+      --- ... existing behaviours
+      enable_cursor_planning_mode = true, -- enable cursor planning mode!
+    },
+    provider = "deepseek_chat",
+    providers = {
       qianwen = {
         __inherited_from = "openai",
         api_key_name = "DASHSCOPE_API_KEY",
@@ -26,11 +30,17 @@ return {
         endpoint = "https://api.siliconflow.cn/v1",
         model = "Qwen/Qwen2.5-Coder-32B-Instruct",
       },
-      deepseek = {
+      deepseek_chat = {
         __inherited_from = "openai",
         api_key_name = "HUGO_DEEPSEEK_API_KEY",
         endpoint = "https://api.deepseek.com/v1",
         model = "deepseek-chat",
+      },
+      deepseek_reasoner = {
+        __inherited_from = "openai",
+        api_key_name = "HUGO_DEEPSEEK_API_KEY",
+        endpoint = "https://api.deepseek.com/v1",
+        model = "deepseek-reasoner",
       },
     },
   },
