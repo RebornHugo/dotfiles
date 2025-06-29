@@ -32,3 +32,19 @@ function extract () {
     echo "'$1' is not a valid file"
   fi
 }
+
+# Function: ff
+# Description: Lists all active windows managed by the 'aerospace' window manager using fzf.
+#              Allows the user to fuzzy-find and select a window, then focuses on the selected window.
+# Usage: ff
+function ff () {
+    # Check if 'aerospace' command exists
+    if ! command -v aerospace &> /dev/null; then
+        echo "Error: 'aerospace' command not found. Please install aerospace window manager."
+        return 1
+    fi
+
+    # List all aerospace windows, pipe to fzf for interactive selection,
+    # and bind 'Enter' key to focus on the selected window.
+    aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
+}

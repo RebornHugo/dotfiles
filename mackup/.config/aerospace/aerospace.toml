@@ -123,7 +123,7 @@ if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'todesktop' # Cursor
+if.app-name-regex-substring = 'Cursor' # Cursor
 run = 'move-node-to-workspace 6'
 
 # Possible values: (qwerty|dvorak|colemak)
@@ -142,10 +142,10 @@ run = 'move-node-to-workspace 6'
 [gaps]
     inner.horizontal = 2
     inner.vertical =   2
-    outer.left =       2
-    outer.bottom =     2
-    outer.top =        2
-    outer.right =      2
+    outer.left =       0
+    outer.bottom =     0
+    outer.top =        0
+    outer.right =      0
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
