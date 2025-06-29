@@ -11,16 +11,18 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install git
   brew install htop
   brew install trash-cli
-  brew install skhd
-  brew services start skhd
-  brew install yabai
-  brew services start yabai
+  # brew install skhd
+  # brew services start skhd
+  brew install --cask nikitabobko/tap/aerospace
+  # brew install yabai
+  # brew services start yabai
   # https://felixkratz.github.io/SketchyBar/setup
   # https://github.com/FelixKratz/dotfiles
   brew install sketchybar
   brew install lazydocker
   brew install lazygit
   brew install lf
+  brew install yq
   brew install stats
   brew install orbstack # docker-cli alternative
   brew install neovide
@@ -154,6 +156,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask stats
   brew install --cask wechat
   brew install --cask visual-studio-code
+  brew install --cask cursor
   brew install --cask zotero
   brew install --cask dropbox
   brew install --cask vlc
@@ -167,6 +170,10 @@ if [ "$(uname)" = "Darwin" ]; then
   echo "increase keystroke speed"
   defaults write -g KeyRepeat -int 1         # 1 for 15ms
   defaults write -g InitialKeyRepeat -int 13 # 13 for 195ms
+  # For VSCode
+  defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+  # For AeroSpace https://nikitabobko.github.io/AeroSpace/goodies#move-by-dragging-any-part-of-the-window
+  defaults write -g NSWindowShouldDragOnGesture -bool true
 elif [ "$(uname)" = "Linux" ]; then
   # in case homebrew overwrite system python3 and pip3
   # NOTE: maybe just set: ENV PATH "$PATH:/home/linuxbrew/.linuxbrew/bin"  ??? even in mac os
