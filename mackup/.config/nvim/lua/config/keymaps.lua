@@ -15,7 +15,7 @@ map("v", "p", '"_dP', { desc = "Paste without overwriting clipboard" })
 map("v", "P", '"_dp', { desc = "Paste before without overwriting clipboard" })
 
 -- vim.keymap.del("n", "<leader>gs") -- doesn't work
-vim.keymap.del("n", "<leader>sk") -- use <leader>fk for telescope keymaps
+-- vim.keymap.del("n", "<leader>sk") -- use <leader>fk for telescope keymaps
 vim.keymap.del("n", "<leader>fT") -- disable Terminal (cwd)
 vim.keymap.del("n", "<leader>ft") -- Terminal (Root Dir)
 map("n", "<leader>ft", LazyVim.pick("live_grep"), { desc = "Grep (Root Dir)" })

@@ -3,3 +3,7 @@
 -- Add any additional options here
 
 vim.opt.signcolumn = "auto:1-3"
+
+if vim.env.VSCODE then
+  vim.g.vscode = true
+end

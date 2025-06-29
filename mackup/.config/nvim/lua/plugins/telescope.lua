@@ -3,7 +3,7 @@ return {
   keys = {
     { "<leader>go", "<cmd>Telescope git_status<CR>", desc = "Status" },
     { "<leader>fl", "<cmd>Telescope resume<cr>", desc = "Resume/Last Search" },
-    { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
+    -- { "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Key Maps" },
     -- { "<leader>ft", LazyVim.pick("live_grep"), desc = "Grep (Root Dir)" }, -- in keymaps.lua
   },
   opts = {
