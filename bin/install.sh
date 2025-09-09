@@ -65,7 +65,7 @@ brew install bat
 brew install fzf
 brew install lsd
 brew install mackup
-brew install neofetch
+brew install fastfetch
 brew install neovim
 brew install npm
 brew install ripgrep

@@ -6,13 +6,14 @@ return {
     cursor_applying_provider = "gemini", -- In this example, use Groq for applying, but you can also use any provider you want.
     behaviour = {
       --- ... existing behaviours
-      enable_cursor_planning_mode = true, -- enable cursor planning mode!
+      auto_suggestions = false, -- Experimental stage
+      enable_cursor_planning_mode = false, -- enable cursor planning mode!
     },
     --- enable auto suggestion
-    auto_suggestions_provider = "deepseek_chat",
+    auto_suggestions_provider = "moonshot",
     -- add any opts here
     -- for example
-    provider = "gemini",
+    provider = "moonshot",
     providers = {
       openai = {
         endpoint = "https://api.openai.com/v1",
@@ -62,6 +63,34 @@ return {
         endpoint = "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
         model = "deepseek-v3-250324",
       },
+      moonshot = {
+        endpoint = "https://api.moonshot.cn/v1",
+        model = "kimi-k2-0711-preview",
+        api_key_name = "AVANTE_MOONSHOT_API_KEY",
+        extra_request_body = {
+          timeout = 30000, -- Timeout in milliseconds
+          temperature = 0.75,
+          max_tokens = 32768,
+        },
+      },
+      -- moonshot = {
+      --   __inherited_from = "openai",
+      --   endpoint = "https://api.moonshot.ai/v1",
+      --   api_key_name = "MOONSHOT_API_KEY",
+      --   model = "kimi-k2-0711-preview",
+      --   timeout = 30000, -- Timeout in milliseconds
+      --   extra_request_body = {
+      --     temperature = 0.75,
+      --     max_tokens = 32768,
+      --   },
+      -- },
+
+      -- moonshot = {
+      --   __inherited_from = "openai",
+      --   api_key_name = "MOONSHOT_API_KEY",
+      --   endpoint = "https://api.moonshot.cn/v1",
+      --   model = "kimi-k2-0711-preview",
+      -- },
     },
   },
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
