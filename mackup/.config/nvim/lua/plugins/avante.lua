@@ -7,13 +7,13 @@ return {
     behaviour = {
       --- ... existing behaviours
       auto_suggestions = false, -- Experimental stage
-      enable_cursor_planning_mode = false, -- enable cursor planning mode!
+      enable_cursor_planning_mode = true, -- enable cursor planning mode!
     },
     --- enable auto suggestion
-    auto_suggestions_provider = "moonshot",
+    auto_suggestions_provider = "deepseek_chat",
     -- add any opts here
     -- for example
-    provider = "moonshot",
+    provider = "deepseek_chat",
     providers = {
       openai = {
         endpoint = "https://api.openai.com/v1",
@@ -101,7 +101,7 @@ return {
     "nvim-lua/plenary.nvim",
     "MunifTanjim/nui.nvim",
     --- The below dependencies are optional,
-    "echasnovski/mini.pick", -- for file_selector provider mini.pick
+    "nvim-mini/mini.pick", -- for file_selector provider mini.pick
     "nvim-telescope/telescope.nvim", -- for file_selector provider telescope
     "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
     "ibhagwan/fzf-lua", -- for file_selector provider fzf
