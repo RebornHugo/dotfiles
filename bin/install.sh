@@ -18,7 +18,6 @@ if [ "$(uname)" = "Darwin" ]; then
   # brew services start yabai
   # https://felixkratz.github.io/SketchyBar/setup
   # https://github.com/FelixKratz/dotfiles
-  brew install sketchybar
   brew install lazydocker
   brew install lazygit
   brew install lf
@@ -156,7 +155,6 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask stats
   brew install --cask wechat
   brew install --cask visual-studio-code
-  brew install --cask cursor
   brew install --cask zotero
   brew install --cask dropbox
   brew install --cask vlc
