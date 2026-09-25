@@ -100,6 +100,10 @@ ln -s "$MYDIR/dotfiles/mackup/.mackup" ~/.mackup
 # TODO: check user name instead of system name
 if [ "$(uname)" = "Darwin" ]; then
   mackup restore
+  keyboard_agent="$HOME/Library/LaunchAgents/com.hugo.internal-keyboard-esc-caps-swap.plist"
+  if [ -f "$keyboard_agent" ] && ! launchctl print "gui/$(id -u)/com.hugo.internal-keyboard-esc-caps-swap" >/dev/null 2>&1; then
+    launchctl bootstrap "gui/$(id -u)" "$keyboard_agent"
+  fi
 elif [ "$(uname)" = "Linux" ]; then
   mackup restore -r
 fi
