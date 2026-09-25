@@ -74,10 +74,6 @@ if.app-name-regex-substring = 'camera'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'WeChat'
-run = 'layout floating'
-
-[[on-window-detected]]
 if.app-name-regex-substring = 'dicord'
 run = 'layout floating'
 
