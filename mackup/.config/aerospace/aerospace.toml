@@ -123,10 +123,6 @@ if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'Cursor'
-run = 'move-node-to-workspace 7'
-
-[[on-window-detected]]
 if.app-name-regex-substring = 'ChatGPT'
 run = 'move-node-to-workspace 8'
 
