@@ -26,7 +26,6 @@ require("lazy").setup({
       },
     },
     -- all LazyExtras
-    { import = "lazyvim.plugins.extras.ai.codeium" },
     { import = "lazyvim.plugins.extras.coding.neogen" },
     { import = "lazyvim.plugins.extras.dap.core" },
     { import = "lazyvim.plugins.extras.editor.harpoon2" },
