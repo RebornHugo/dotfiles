@@ -59,7 +59,7 @@ fi
 
 brew install bat
 # brew install fd
-# brew install gh
+brew install gh
 # brew install git-delta
 brew install fzf
 brew install lsd

@@ -3,7 +3,7 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 export EDITOR="nvim"
 
-export PATH="$HOME/.local/bin":/usr/local/bin:$HOME/.config/bin:$PATH
+export PATH="$HOME/.local/bin":/opt/homebrew/bin:/usr/local/bin:$HOME/.config/bin:$PATH
 
 # Use starship instead of zsh's theme, reference: https://www.youtube.com/watch?v=Mu4frtvHPOY
 eval "$(zoxide init zsh)"
