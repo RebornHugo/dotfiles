@@ -154,7 +154,6 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask telegram
   brew install --cask spotify
   brew install --cask sioyek
-  brew install --cask karabiner-elements
   brew install --cask clashx
   brew install --cask stats
   brew install --cask wechat
