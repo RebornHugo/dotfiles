@@ -163,6 +163,7 @@ if [ "$(uname)" = "Darwin" ]; then
   brew install --cask vlc
   brew install --cask qq
   brew install --cask zoom
+  brew install --cask rustdesk
   brew install --cask anki
   brew install --cask futubull
   # brew install --cask forticlient
