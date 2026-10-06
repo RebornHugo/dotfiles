@@ -6,14 +6,12 @@
   <string>com.hugo.air75-bt5-esc-caps-swap</string>
   <key>ProgramArguments</key>
   <array>
-    <string>/usr/bin/hidutil</string>
-    <string>property</string>
-    <string>--matching</string>
-    <string>{"VendorID":1452,"ProductID":591,"PrimaryUsagePage":1,"PrimaryUsage":6}</string>
-    <string>--set</string>
-    <string>{"UserKeyMapping":[{"HIDKeyboardModifierMappingSrc":0x700000039,"HIDKeyboardModifierMappingDst":0x700000029},{"HIDKeyboardModifierMappingSrc":0x700000029,"HIDKeyboardModifierMappingDst":0x700000039}]}</string>
+    <string>/bin/sh</string>
+    <string>/Users/hugo/.config/hidutil/air75-bt5-esc-caps.sh</string>
   </array>
   <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
   <true/>
 </dict>
 </plist>
